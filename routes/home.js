@@ -4,13 +4,12 @@ var passport = require('../config/passport');
 var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
 dotenv.config();
-var s3 = new AWS.S3();
-
 
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
   region: 'ap-northeast-2'});
+var s3 = new AWS.S3();
 
 let lists = [];
 s3.listObjectsV2(
