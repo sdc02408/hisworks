@@ -1,0 +1,219 @@
+*{
+  font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.parallax-mirror{
+  width:100%;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+  width: 100%;
+}
+.carousel-item{display: block;}
+
+.main-content{
+    display:flex;
+    flex-direction: column;
+    top:20%;
+
+}
+.main-title{
+    color: white;
+    font-weight: 600;
+    font-size:30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.sub-content{
+    color: white;
+    font-weight: 500;
+    font-size:20px;
+    justify-content: center;
+    text-align: center;
+}
+.search-section{
+    display: flex;
+
+}
+.search-size{
+    justify-content: center;
+}
+.select-contain{
+    margin:0 auto;
+}
+.select-tab{
+display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    width:100%;
+
+}
+.custom-select{
+
+    margin-right:10px;
+}
+
+footer ul{
+    margin-bottom: 0;
+}
+
+footer.page-footer{
+    color: #ffffff;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    justify-content: center;
+    width: 100%;
+}
+footer .footer-list{
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+    margin-bottom: 0;
+}
+
+ul.footer-list li a{
+    color: #ffffff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size:12px;
+    font-weight: 500;
+}
+.fa-instagram:before{
+    color: #ffffff;
+}
+
+.header {
+    text-align: center;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.fit-image{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1024px){
+    .form-inline .form-control{
+        width: 60%;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+    .wrapper{
+        width:100%;
+         display:flex;
+        justify-content: center;
+
+    }
+    .col-sm-12{
+        max-width: 100%;
+    }
+    .select-tab{
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+
+    .modal-no-padding{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-inline .form-control{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .modal-no-padding{
+        margin:0;
+        height: 300px
+    }
+
+}
+
+.pic{
+    height: 60%;
+}
+
+.main-text{
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+
+}
+.main-text .sub-text{
+    font-weight: 700;
+    color:white;
+    font-size: 40px;
+}
+
+.modal-dialog{
+    max-width: 100%;
+    height: 100%;
+}
+.modal-dialog .modal-content {
+    height:initial;
+    overflow-y: visible;
+
+}
+
+.select-photo-body{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  height: fit-content;
+
+}
+@media (min-width: 768px) {
+  .col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0;
+    max-width: 100%;
+  }
+}
+
+.select-photo{
+  /*height: auto;*/
+  /*width:auto;*/
+
+    max-width: calc((100vh - 175px) * 0.666667);
+  max-width: calc((100vh - 175px) * 1.5);
+}
+/*.modal-open .modal{*/
+/*    overflow-y: hidden;*/
+/*}*/
+.photo-modal{
+    width: 100%;
+}
+
+
+

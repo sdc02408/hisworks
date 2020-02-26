@@ -1,0 +1,58 @@
+
+<div class="view parallax-window" data-parallax="scroll" data-image-src="/images/second.jpg"
+     style=" background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/">YANG'S PHOTO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "><i class="fas fa-align-justify res-icon"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!--            <ul class="navbar-nav mr-auto">-->
+<!--                <li class="nav-item active">-->
+<!--                    <a class="nav-link" href="/login">로그인<span class="sr-only">(current)</span></a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/register">회원가입</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="/board">게시판</a>-->
+<!--                </li>-->
+<!--                &lt;!&ndash;                <li class="nav-item dropdown">&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"&ndash;&gt;-->
+<!--                &lt;!&ndash;                       aria-haspopup="true" aria-expanded="false">&ndash;&gt;-->
+<!--                &lt;!&ndash;                        제품구매하기&ndash;&gt;-->
+<!--                &lt;!&ndash;                    </a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <a class="dropdown-item" href="/aboutus">Action</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <a class="dropdown-item" href="/board">Another action</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <div class="dropdown-divider"></div>&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <a class="dropdown-item" href="#">Something else here</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--                &lt;!&ndash;                </li>&ndash;&gt;-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link " href="/aboutus" tabindex="-1" aria-disabled="true">aboutus</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/posts" class="nav-link">Board</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <% if(isAuthenticated){ %>
+                    <li class="nav-item"><a href="/users/<%= currentUser.username %>" class="nav-link">My Account</a></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+                <% } else { %>
+                    <li class="nav-item"><a href="/users/new" class="nav-link">Sign Up</a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                <% } %>
+            </ul>
+<!--            <form class="form-inline my-2 my-lg-0">-->
+<!--                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>-->
+<!--            </form>-->
+        </div>
+    </nav>

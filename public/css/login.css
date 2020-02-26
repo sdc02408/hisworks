@@ -1,0 +1,92 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 650px;
+  }
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.user-form {
+
+  position: relative;
+  top:20%;
+}
+.login-card{
+  top:20%;
+  position: relative;
+}
+
+.choose-login ul {
+  list-style:none;
+  display: flex;
+  justify-content: space-around;
+}
+.choose-login{
+  text-align: center;
+  list-style: none;
+}
+.choose-login a{
+  display: inline-block;
+  padding: 10px 0;
+  margin: 0 15px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 2px solid transparent;
+  line-height: 24px;
+  text-align: center;
+  font-size:24px;
+  font-weight: 600;
+}
+.choose-login .card-select{
+  text-align: center;
+}
+.choose-login .card-select:hover{
+  color:red;
+  text-decoration: none;
+}
+
+.login-box{
+  top:20%;
+  position:relative;
+}
+.card {
+  background-color: #ffffff;
+}
+.card-button{
+  padding: 0;
+}
+.social-login{
+  display: flex;
+  justify-content: space-around;
+}
+.G-btn,
+.N-btn{
+  width:49%;
+}
+#naverbtn{
+  width:100%;
+}
+.forget-pw{
+ margin-top:15px;
+  font-size: 12px;
+  color: #0a88d3;
+}
+

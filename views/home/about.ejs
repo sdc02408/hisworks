@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+    <link href="css/aboutus.css" rel="stylesheet">
+    <link href="css/normal_header.css" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('../partials/normal_header') %>
+
+    <main role="main">
+
+      <div class="container ">
+        <div class="row feature about_main">
+          <div class="col-md-5 about_main_text">
+            <h5 class=" about_main_title">풍경은 멋있다</h5>
+            <div class="about_main_subtitle">뭐라 쓸까요 여기는 어떤 내용이든 우리의 철학이나 뭐나 아무거나 쓰자 write anything. download the best picture and pay the money 칸이 더 길어도 좋겠지~~? 그렇지??? english is better?
+            </div>
+
+            <div class="contact_btn">
+              <button type="button" class="btn us_btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact us</button>
+              <button type="button" class="btn start_btn">Start browsing</button>
+            </div>
+
+          </div>
+          <div class="col-md-7">
+            <img class="main-img img-fluid mx-auto" src="images/maple.jpg" alt="Generic placeholder image">
+          </div>
+        </div>
+
+
+        <!--modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">문의하기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="name" class="col-form-label">name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-form-label">email</label>
+                    <input type="text" class="form-control" id="eamil">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="container marketing ">
+          <div class="row">
+            <div class="col-lg-4">
+              <img class="" src="images/maple.jpg" alt="Generic placeholder image" width="320" height="200">
+              <h2>배고프네</h2>
+              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+              <p><a class="btn three_btn" href="#" role="button">View details</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="" src="images/maple.jpg" alt="Generic placeholder image" width="320" height="200">
+              <h2>뭐먹을까</h2>
+              <p>한글만ㄹ로 ㅈ랍을것도 나쁘지 ㅏ기생충>은 세계 최고의 영화제 칸에서 최고 상인 ‘황금 종려상’을 수상하며 한국 영화의 무수한 발전 가능성을 보여주기도 했습니다. 이렇게 뛰어난 영화들이 많이 등장하면서 영화관도 덩달아 바빠지고 있는 상황이죠. </p>
+              <p><a class="btn three_btn" href="#" role="button">View details</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <img class="" src="images/maple.jpg" alt="Generic placeholder image" width="320" height="200">
+              <h2>이렇게</h2>
+              <p>우리가 하려는건 이런거다. 길게 써야 멋있따 기생충>은 세계 최고의 영화제 칸에서 최고 상인 ‘황금 종려상’을 수상하며 한국 영화의 무수한 발전 가능성을 보여주기도 했습니다. 이렇게 뛰어난 영화들이 많이 등장하면서 영화관도 덩달아 바빠지고 있는 상황이죠.</p>
+              <p><a class="btn three_btn" href="#" role="button">View details</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div>
+
+
+
+        <!-- START THE FEATURETTES -->
+
+        <div class="view parallax-window " data-parallax="scroll" data-image-src="images/maple.jpg"
+             style=" background-repeat: no-repeat; background-size: cover; background-position: center center;">
+          <div class="pal-text">
+            <div id="pal_main">알새우칩응 막있다</div>
+            <div id="pal_sub">스낵은언제나 농신 알새ㅊ으침;ㅣㅂ;ㅣㅏㅓ바;ㅣㅓ</div>
+          </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading.</h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto sub-photo" src="images/maple.jpg" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it's that good.</h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto sub-photo" src="images/maple.jpg" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="footer_line">
+
+        <!-- /END THE FEATURETTES -->
+        <footer class="footer">
+          <div class="container footer_text">
+            <span class="footer_width">produced by yang's</span>
+            <span class="footer_width">회사소개</span>
+            <span class="footer_width">광고하기</span>
+            <span class="footer_width">이용약관</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script type="text/javascript" src="js/normal_header.js"></script>
+  </body>
+</html>

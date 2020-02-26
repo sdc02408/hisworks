@@ -1,0 +1,29 @@
+.container{
+
+  margin: 20px auto;
+  max-width: 1200px;
+  padding:20px;
+
+  column-count: 3;
+  column-gap:20px;
+  column-width:3.3vw;
+}
+
+.spotimage{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 500px) and (max-width: 750px){
+  .container{
+      column-count: 2;
+      column-width: 1.5vw;
+  }
+}
+@media screen and (max-width: 499px){
+  .container{
+    column-count: 1;
+    column-width: 1vw;
+  }
+}
+

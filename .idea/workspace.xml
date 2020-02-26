@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac5912c3-b9cb-471d-b526-baf35a53d0f1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XAcs3PUFTVaqKf3SyMSyo6c3QG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2651869" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\public\css" />
+      <recent name="D:\etc\realsite\realsite\public\js" />
+      <recent name="D:\etc\realsite\realsite\public" />
+      <recent name="D:\etc\realsite\realsite\views\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\views\partials" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\akaca\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac5912c3-b9cb-471d-b526-baf35a53d0f1" name="Default Changelist" comment="" />
+      <created>1580492542644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580492542644</updated>
+      <workItem from="1580492543775" duration="2294000" />
+      <workItem from="1580533847664" duration="1384000" />
+      <workItem from="1580535497601" duration="246000" />
+      <workItem from="1580535758878" duration="12608000" />
+      <workItem from="1580652302457" duration="8279000" />
+      <workItem from="1580699989083" duration="10899000" />
+      <workItem from="1580720156390" duration="41000" />
+      <workItem from="1580720399866" duration="7136000" />
+      <workItem from="1580752507304" duration="3618000" />
+      <workItem from="1580792114586" duration="17230000" />
+      <workItem from="1580875036516" duration="16963000" />
+      <workItem from="1581582993111" duration="122000" />
+      <workItem from="1582027085749" duration="9000" />
+      <workItem from="1582127598587" duration="5814000" />
+      <workItem from="1582174784031" duration="16595000" />
+      <workItem from="1582214275919" duration="275000" />
+      <workItem from="1582219221339" duration="3302000" />
+      <workItem from="1582254430428" duration="7077000" />
+      <workItem from="1582293298330" duration="7856000" />
+      <workItem from="1582331679077" duration="71000" />
+      <workItem from="1582371451000" duration="8937000" />
+      <workItem from="1582465735813" duration="1048000" />
+      <workItem from="1582468895994" duration="2128000" />
+      <workItem from="1582516273147" duration="20293000" />
+      <workItem from="1582605277315" duration="15597000" />
+      <workItem from="1582642235553" duration="2574000" />
+      <workItem from="1582644826572" duration="10461000" />
+      <workItem from="1582689578410" duration="2413000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/comments.js</url>
+          <line>66</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

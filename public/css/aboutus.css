@@ -1,0 +1,168 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.ga{
+  vertical-align: middle;
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 650px;
+  }
+}
+
+.main-img,
+.sub-photo{
+border-radius: 2%;
+  box-shadow: 10px 10px 5px #ccc;
+}
+
+.contact_btn{
+  padding-top: 25px;
+}
+.us_btn{
+  background-color: #111111;
+  color:white;
+}
+.start_btn{
+  border: 1px solid #d1d1d1;
+  color: #767676;
+}
+
+.three_btn{
+  background-color: #111111;
+  color:white;
+}
+
+.parallax-window {
+  max-height: 300px;
+  background: transparent;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+.about_main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_main_text{
+  position: relative;
+  bottom: 50px;
+}
+.about_main_title{
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  font-size:40px;
+  color: #111111;
+  margin-bottom: 1.7rem
+}
+.about_main_subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-size: 18px;
+  color: #111111;
+}
+
+.pal-text{
+
+}
+#pal_main{
+  color: #eeeeee;
+  font-size: 32px;
+  font-weight: 600;
+
+}
+
+#pal_sub{
+  color: #eeeeee;
+  font-size: 22px;
+  font-weight: 500;
+
+
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1280px) {
+.about_main{
+  height: 800px;
+}
+}
+@media screen and (max-width: 800px) {
+  .about_main_text{
+    bottom: 0px;
+  }
+}
+
+/*##########footer*/
+/* Footer */
+.footer_text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_width {
+  color: #767676;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.footer_line{
+  margin: 5rem 0 2rem 0;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <%- include('../partials/head') %>
+
+
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<!--    <link href="css/spotlight.css" rel="stylesheet">-->
+</head>
+<body>
+<%- include('../partials/mynav') %>
+
+<div class="main-content col-12">
+    <p class="main-title col-12">Yang's photo</p>
+    <p class="sub-content col-12">Life is short, world is wide. I want to make memories!</p>
+    <form class="form-inline col-lg-12  search-size my-2 my-lg-0 ">
+        <!--      <span><i class="fas fa-search"></i></span>-->
+        <input class="form-control col-lg-6 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+    <!--      <div class="select-contain col-md-4 col-sm-12 col-xs-12" style="display: flex; justify-content: center">-->
+    <!--        <div class="select-tab">-->
+
+    <!--          <select class="custom-select custom-select-sm" id="hi" onchange="selectNum()">-->
+    <!--            <option selected value="fixed">정렬</option>-->
+    <!--            <option value="popular">인기순</option>-->
+    <!--            <option value="new">최신순</option>-->
+    <!--          </select>-->
+    <!--          <p id="demo"></p>-->
+
+    <!--          <select class="custom-select  custom-select-sm">-->
+    <!--            <option selected>카테고리</option>-->
+    <!--            <option value="1">풍경</option>-->
+    <!--            <option value="2">꽃</option>-->
+    <!--            <option value="3">나무</option>-->
+    <!--          </select>-->
+
+    <!--          <select class="custom-select  custom-select-sm">-->
+    <!--            <option selected>방향</option>-->
+    <!--            <option value="1">세로</option>-->
+    <!--            <option value="2">가로</option>-->
+    <!--          </select>-->
+    <!--        </div>-->
+    <!--      </div>-->
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer  pt-4">
+    <!-- Footer Links -->
+    <div class="cs-footer">
+        <!-- Grid row -->
+
+        <!-- Grid column -->
+
+        <ul class="footer-list">
+            <li>
+                <a href=#>produce by Yangchanseok</a>
+            </li>
+
+            <li>
+                <a href="#!">저작권</a>
+            </li>
+            <li>
+                <a href="#!">문의하기</a>
+            </li>
+            <li>
+                <a class="ins-ic" href="https://www.instagram.com/pic._.udream/">
+                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Grid row -->
+    <!-- Footer Links -->
+</footer>
+<!-- Footer -->
+</div>
+
+<!--&lt;!&ndash; Central Modal Small &ndash;&gt;-->
+<!--<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"-->
+<!--     aria-hidden="true">-->
+
+<!--    &lt;!&ndash; Change class .modal-sm to change the size of the modal &ndash;&gt;-->
+<!--    <div class="modal-dialog col-lg-12 modal-no-padding" role="document">-->
+
+
+<!--        <div class="modal-content photo-modal">-->
+<!--            <div class="modal-header">-->
+<!--                <h5 class="modal-title w-100" id="myModalLabel">여기에 성경말씀을 적으세요</h5>-->
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--            <div class=" select-photo-body">-->
+<!--                <img class="select-photo col-md-12 modal-no-padding" src="images/maple.jpg" style="height:60%;">-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button 3type="button" id="download-btn">Download</button>-->
+<!--                <button type="button" class="btn btn-secondary btn-sm" id="saveImage" data-dismiss="modal">Close-->
+<!--                </button>-->
+<!--                <button type="button" class="btn btn-primary btn-sm">Save changes</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="container">
+            <% for (var i = 0; i < lists.length; i++) { %>
+
+                <a class="spotlight" href="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>">
+                                       <img class="spotimage"  data-autofit="true"  src="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>"
+                         alt="">
+                </a>
+
+                <% } %>
+
+</div>
+
+
+<!--    <h1>hi</h1>-->
+<!--    <form action="/logout?_method=DELETE" method="POST">-->
+<!--      <button type="submit">Log Out</button>-->
+<!--    </form>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/spotlight.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/spotlight.bundle.js"></script>
+</body>

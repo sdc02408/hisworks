@@ -1,0 +1,165 @@
+/**{*/
+/*  font-family: 'Montserrat', sans-serif;*/
+/*  font-family: 'Nanum Gothic', sans-serif;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*}*/
+
+/*.container{*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*}*/
+
+/*#forum{*/
+/*  margin-top:14px;*/
+/*  margin-bottom: 0;*/
+/*}*/
+/*.board{*/
+/*  max-width: 1140px;*/
+/*  margin:40px auto 0 auto;*/
+/*}*/
+
+/*.board-tap{*/
+/*  display: flex;*/
+/*  max-width: 1140px;*/
+/*  justify-content: space-between;*/
+/*}*/
+/*.board-table{*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  max-width: 1040px;*/
+/*  margin-top:40px;*/
+/*}*/
+
+/*hr{*/
+/*  max-width: 1040px;*/
+/*  text-align: center;*/
+/*}*/
+/*.write-board{*/
+/*  border: 1px solid #d1d1d1;*/
+/*  color: #767676;*/
+/*  margin-right: 8%;*/
+/*}*/
+
+
+/*.info-margin{*/
+/*  margin: 0 20px;*/
+/*  display: inline-block;*/
+/*  vertical-align: top;*/
+/*  text-align: center;*/
+/*}*/
+
+/*#table-content-title{*/
+/*  margin-bottom: 5px;*/
+/*}*/
+/*#table-content-sentence{*/
+/*  font-size: 14px;*/
+/*  font-weight: 300;*/
+/*  color:#636363;*/
+/*}*/
+/*.rewrite{*/
+/*  height: fit-content;*/
+/*  width:150px;*/
+/*  margin-right: 10px;*/
+/*  border:none;*/
+/*  background: none;*/
+/*  color: #767676;*/
+/*}*/
+/*.rewrite a{*/
+/*  color: #767676;*/
+/*}*/
+
+
+/*.deletebtn{*/
+/*  border:none;*/
+/*  background: none;*/
+/*  color: #767676;*/
+/*}*/
+/*!*.board-table{*!*/
+/*!*  width:100%;*!*/
+/*!*  display: block;*!*/
+/*!*}*!*/
+
+/*!*.board-table-info{*!*/
+/*!*  float: right;*!*/
+/*!*  display: block;*!*/
+/*!*}*!*/
+/*@media (min-width: 460px) and (max-width: 1023px) {*/
+/*  .board-table-info{*/
+/*    width: 50%;*/
+/*  }*/
+/*  .info-margin{*/
+/*    margin:0 5px;*/
+/*    text-align: center;*/
+/*  }*/
+/*  .rewrite{*/
+/*    display: none;*/
+/*  }*/
+/*  .deletebtn{*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+/*.highlighted {*/
+/*  background-color: yellow;*/
+/*}*/
+
+.board-table .author,
+.board-table .date {
+  width: 150px;
+}
+.board-tap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.board-tab-title{
+  font-weight: 600;
+}
+.date{
+  color: #767676;;
+}
+.table .thead-light th{
+  background-color: white;
+}
+
+.table thead th{
+  border:none;
+}
+.table{
+  border:none;
+}
+.table th, .table td{
+  border:none;
+}
+
+.board-tab{
+  color:#767676;
+}
+@media (min-width: 460px) and (max-width: 1023px) {
+  .container{
+    width: 100%;
+    margin:0;
+    max-width: 100%;
+  }
+  .board-table .author{
+    width: 150px;
+  }
+  .board-table .date{
+    display: none;
+  }
+  .board-show{
+    width:100%;
+  }
+
+}
+@media (max-width: 459px) {
+  .col-3{
+    flex: 100%;
+    max-width: 100%;
+  }
+  .col-9{
+    flex: 100%;
+    max-width: 100%;
+  }
+}

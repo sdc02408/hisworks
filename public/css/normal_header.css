@@ -1,0 +1,41 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand{
+  font-size: 1.5rem;
+}
+
+.navbar-nav{
+  font-size:20px;
+  font-weight: 500;
+}
+.res-icon{
+  color:#111111;
+}
+
+.navbar a{
+  color: #111111;
+}
+.dropdown-menu a{
+  color: #212529;
+}
+.res-icon{
+  margin-top: 5px;
+}
+.parallax-window {
+  max-height: 300px;
+  background: transparent;
+}
+@media screen and (max-width: 1440px) {
+  .navbar{
+    width:100%;
+  }
+}
+
+.mybtn{
+  border: 1px solid #d1d1d1;
+  color: #767676;
+}

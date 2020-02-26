@@ -1,0 +1,61 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+#new-form{
+  position: relative;
+  top:10%;
+}
+.choose-login{
+
+  text-align: center;
+  list-style: none;
+}
+.choose-login a{
+  display: inline-block;
+  padding: 10px 0;
+  margin: 0 15px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 2px solid transparent;
+  line-height: 24px;
+  text-align: center;
+  font-size:24px;
+  font-weight: 600;
+}
+.choose-login .card-select{
+  text-align: center;
+}
+.choose-login .card-select:hover{
+  color:red;
+  text-decoration: none;
+}
+
+.register-box{
+  position:relative;
+  top:20%;
+}
+.card {
+  background-color: #ffffff;
+}
+.agree{
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.agree span{
+  color: #0a88d3;
+  margin:0;
+}
+
+.submitbtn{
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .card{
+    width:90%;
+    margin: -20px auto 0;
+  }
+}

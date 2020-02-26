@@ -1,0 +1,154 @@
+.edit-box{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.edit-box2{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.edit-board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+}
+
+.edit-board-inner{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  width: 40%;
+}
+
+.lookboard-pic{
+  background: url("../images/lookboardbg2.jpg") center;
+  position: relative;
+  width:100%;
+  height: 30vh;
+  opacity: 0.9;
+}
+
+.section-main-title{
+  margin-bottom: 30px;
+  color:white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 17%;
+  width: 100%;
+  margin: 0 auto;
+}
+#section-title{
+  font-size:42px;
+  font-weight: bold;
+  line-height: 1.5;
+  color:white;
+  text-align: left;
+  max-width: 100%;
+}
+
+#section-writer{
+  color: white;
+  font-size: 22px;
+  margin:0;
+}
+#section-date{
+  color: white;
+  font-size: 13px;
+}
+
+
+.edit-title{
+  width:100%;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.edit-writer{
+  width:100%;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.edit-content{
+  width:100%;
+  height: 250px;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.edit-inner-btn{
+  margin-top:20px;
+  position: relative;
+  width:10%;
+  height: 40px;
+  color: #fff;
+  background-color: #111;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  transition: all .1s ease-in-out;
+  text-align: center;
+}
+
+
+@media(max-width: 960px){
+  .edit-board{
+    width: 100%;
+  }
+  .edit-board-inner{
+    width:90%;
+
+  }
+  .edit-title,
+  .edit-writer {
+    width: 90%;
+  }
+
+  .edit-content{
+    width: 90%;
+    height: 300px;
+  }
+}
+
+
