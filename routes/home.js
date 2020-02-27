@@ -75,13 +75,23 @@ router.post('/login',
   }
 ));
 
+
+
+router.get('/auth/naver', passport.authenticate('naver',{
+  successRedirect: '/',
+  failureRedirect : '/login'
+}));
+
+router.get('/auth/naver/callback\'', passport.authenticate('naver',{
+  successRedirect: '/',
+  failureRedirect: '#!/auth/login'
+}))
+
 // Logout
 router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
 });
-
-
 
 
 module.exports = router;

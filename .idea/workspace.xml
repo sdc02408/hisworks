@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../exnodepassport" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -100,7 +100,7 @@
       <workItem from="1582689578410" duration="3806000" />
       <workItem from="1582693428223" duration="4737000" />
       <workItem from="1582728063688" duration="3608000" />
-      <workItem from="1582778027219" duration="3436000" />
+      <workItem from="1582778027219" duration="7580000" />
     </task>
     <servers />
   </component>
