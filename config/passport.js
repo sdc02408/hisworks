@@ -43,8 +43,8 @@ passport.use('local-login',
 
 
 passport.use('naver', new NaverStrategy({
-  clientID: process.env.NAVER_CLIENT_ID,
-  clientSecret: process.env.NAVER_CLIENT_SECRET,
+  clientID:'Zwrl2EIZ3F2UJGbvUjEQ',
+  clientSecret:'yHDB5NM60r',
   callbackURL:'https://picudream.herokuapp.com',
     svcType: 0,
   authType:'reauthenticate'

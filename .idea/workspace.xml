@@ -100,7 +100,7 @@
       <workItem from="1582689578410" duration="3806000" />
       <workItem from="1582693428223" duration="4737000" />
       <workItem from="1582728063688" duration="3608000" />
-      <workItem from="1582778027219" duration="18636000" />
+      <workItem from="1582778027219" duration="19375000" />
     </task>
     <servers />
   </component>
@@ -133,6 +133,12 @@
           <line>39</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/config/passport.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
