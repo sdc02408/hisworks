@@ -19,7 +19,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect('mongodb://heroku_vv8q77wg:pm29p5knrsa8fsmpmj5lvj5i54@ds039007.mlab.com:39007/heroku_vv8q77wg');
+mongoose.connect(process.env.DB_URL);
 var db = mongoose.connection;
 db.once('open', function(){
   console.log('DB connected');
