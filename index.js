@@ -10,13 +10,16 @@ var util = require('./util');
 const ejsLint = require('ejs-lint');
 var dotenv = require('dotenv');
 dotenv.config();
+var helmet = require('helmet');
+var assert = require('assert');
+var MongoDBStore = require('connect-mongodb-session')(session);
 
 // DB setting
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect('mongodb://heroku_vv8q77wg:pm29p5knrsa8fsmpmj5lvj5i54@ds039007.mlab.com:39007/heroku_vv8q77wg');
+mongoose.connect(process.env.DB_URL);
 var db = mongoose.connection;
 db.once('open', function(){
   console.log('DB connected');
@@ -32,11 +35,35 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(flash());
-app.use(session({secret:'MySecret', resave:true, saveUninitialized:true}));
+
+var store = new MongoDBStore({
+    uri:process.env.DB_URL,
+    collection: 'mySessions'
+  });
+//catch errors
+store.on('error', function(error)  {
+  assert.ifError(error);
+  assert.ok(false);
+}); //세션을 외부에 저장
+
+app.use(session({
+  secret:'MySecretcsy',
+  resave:true,
+  saveUninitialized:true,
+  cookie: {maxAge: 3600000, httpOnly: true},
+  store: store,
+  rolling: true
+}));//세션 암호화
+
+app.use(helmet.hsts({
+  maxAge: 10886400000,
+  includeSubDomains:true
+}));//세션 보안 설정
+
 
 // Passport
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize());//passport 모듈 초기화
+app.use(passport.session());//passport 세션 사용
 
 // Custom Middlewares
 app.use(function(req,res,next){
@@ -52,7 +79,6 @@ app.use('/users', require('./routes/users'));
 app.use('/comments', util.getPostQueryString, require('./routes/comments')); // 1
 
 // Port setting
-
 app.listen(process.env.PORT, function(){
   console.log('server on! http://localhost:'+process.env.PORT);
 });

@@ -1,7 +1,9 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
+var NaverStrategy = require('passport-naver').Strategy;
 var User = require('../models/User');
+var dotenv = require('dotenv');
+dotenv.config();
 
 // serialize & deserialize User
 passport.serializeUser(function(user, done) {
@@ -38,6 +40,42 @@ passport.use('local-login',
     }
   )
 );
+
+passport.use('naver', new NaverStrategy({
+  clientID: process.env.NAVER_CLIENT_ID,
+  clientSecret: process.env.NAVER_CLIENT_SECRET,
+  callback_url:'https://picudream.herokuapp.com'
+  },
+function(accessToken, refreshToken, profile, cb) {
+User.findOne({sns:'naver', distinguishID: profile.id}, function(err, user) {
+  if (err) {
+    return cb(err)
+  }
+  if (!user) {
+    User.create({
+      name: profile.displayName,
+      sns: profile.provider,
+      distinguishID: profile.id,
+      token: accessToken
+    }, function(err, user) {
+      if (err) {
+        return cb(err);
+      }
+      cb(null, user);
+    });
+  } else {
+    var tmp = accessToken;
+    var tmp2 = new Date();
+    User.findByIdAndUpdate(user._id, { $set: { lastvisited: tmp2, token: tmp } }, function(err, user) {
+      if (err) {
+        return cb(err);
+      }
+      cb(null, user);
+    });
+  }
+});
+}))
+
 
 
 

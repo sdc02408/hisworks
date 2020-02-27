@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('../config/passport');
-var NaverStrategy = require('passport-naver').Strategy;
-var config = require('../config/config');
+
 var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
 dotenv.config();
@@ -77,52 +76,19 @@ router.post('/login',
   }
 ));
 
+router.get('/auth/naver', passport.authenticate('naver',{
+  successRedirect : '/posts',
+  failureRedirect : '/login'
+}))
 
-router.get('/naver',passport.authenticate('naver',null),function(req, res) {
-  console.log("/naver");
-});
-
-//처리 후 callback 처리 부분 성공/실패 시 리다이렉트 설정
-router.get('/naver/callback', passport.authenticate('naver', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-  })
-);
-
-passport.use(new NaverStrategy({
-    clientID: process.env.NAVER_CLIENT_ID,
-    clientSecret: process.env.NAVER_CLIENT_SECRET,
-    callbackURL:'https://picudream.herokuapp.com'
-  },
-  function(accessToken, refreshToken, profile, done) {
-    process.nextTick(function () {
-      
-      var user = {
-        name: profile.displayName,
-        email: profile.emails[0].value,
-        username: profile.displayName,
-        provider: 'naver',
-        naver: profile._json
-      };
-      console.log("user=");
-      console.log(user);
-      
-      return done(null, user);
-    });
-  }
-));
+router.get('/naver_oauth', passport.authenticate('naver',{
+  successRedirect : '/posts',
+  failureRedirect : '/login'
+}))
 
 
 
-// router.get('/auth/naver', passport.authenticate('naver-login',{
-//   successRedirect: '/posts',
-//   failureRedirect : '/login'
-// }));
-//
-// router.get('/auth/naver/callback\'', passport.authenticate('naver-login',{
-//   successRedirect: '/posts',
-//   failureRedirect: '/auth/login'
-// }))
+
 
 // Logout
 router.get('/logout', function(req, res) {
