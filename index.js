@@ -12,7 +12,6 @@ var dotenv = require('dotenv');
 dotenv.config();
 var helmet = require('helmet');
 var assert = require('assert');
-var MongoDBStore = require('connect-mongodb-session')(session);
 
 // DB setting
 mongoose.set('useNewUrlParser', true);
@@ -36,10 +35,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(flash());
 
-var store = new MongoDBStore({
-    uri:process.env.DB_URL,
-    collection: 'mySessions'
-  });
 //catch errors
 store.on('error', function(error)  {
   assert.ifError(error);
@@ -51,7 +46,7 @@ app.use(session({
   resave:true,
   saveUninitialized:true,
   cookie: {maxAge: 3600000, httpOnly: true},
-  store: store,
+
   rolling: true
 }));//세션 암호화
 
