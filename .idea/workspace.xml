@@ -36,16 +36,16 @@
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\views\partials" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\etc\realsite\realsite\public\images" />
       <recent name="D:\etc\realsite\realsite\public\css" />
       <recent name="D:\etc\realsite\realsite\public\js" />
       <recent name="D:\etc\realsite\realsite\public" />
       <recent name="D:\etc\realsite\realsite\views\home" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\etc\realsite\realsite\public\images" />
-      <recent name="D:\etc\realsite\realsite\views\partials" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -100,7 +100,7 @@
       <workItem from="1582689578410" duration="3806000" />
       <workItem from="1582693428223" duration="4737000" />
       <workItem from="1582728063688" duration="3608000" />
-      <workItem from="1582778027219" duration="15979000" />
+      <workItem from="1582778027219" duration="16411000" />
     </task>
     <servers />
   </component>

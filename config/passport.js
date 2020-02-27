@@ -44,7 +44,7 @@ passport.use('local-login',
 passport.use('naver', new NaverStrategy({
   clientID: process.env.NAVER_CLIENT_ID,
   clientSecret: process.env.NAVER_CLIENT_SECRET,
-  callback_url:'https://picudream.herokuapp.com'
+  callbackURL:'https://picudream.herokuapp.com'
   },
 function(accessToken, refreshToken, profile, cb) {
 User.findOne({sns:'naver', distinguishID: profile.id}, function(err, user) {
