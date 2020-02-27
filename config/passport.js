@@ -41,39 +41,34 @@ passport.use('local-login',
   )
 );
 
+
 passport.use('naver', new NaverStrategy({
   clientID: process.env.NAVER_CLIENT_ID,
   clientSecret: process.env.NAVER_CLIENT_SECRET,
-  callbackURL:'https://picudream.herokuapp.com'
+  callbackURL:'https://picudream.herokuapp.com',
+    svcType: 0,
+  authType:'reauthenticate'
   },
-function(accessToken, refreshToken, profile, cb) {
-User.findOne({sns:'naver', distinguishID: profile.id}, function(err, user) {
-  if (err) {
-    return cb(err)
-  }
-  if (!user) {
-    User.create({
-      name: profile.displayName,
-      sns: profile.provider,
-      distinguishID: profile.id,
-      token: accessToken
-    }, function(err, user) {
-      if (err) {
-        return cb(err);
-      }
-      cb(null, user);
-    });
-  } else {
-    var tmp = accessToken;
-    var tmp2 = new Date();
-    User.findByIdAndUpdate(user._id, { $set: { lastvisited: tmp2, token: tmp } }, function(err, user) {
-      if (err) {
-        return cb(err);
-      }
-      cb(null, user);
-    });
-  }
-});
+function(accessToken, refreshToken, profile, done) {
+  User.findOne({
+    'naver.id': profile.id
+  }, function(err, user) {
+    if (!user) {
+      user = new User({
+        name: profile.displayName,
+        email: profile.emails[0].value,
+        username: profile.displayName,
+        provider: 'naver',
+        naver: profile._json
+      });
+      user.save(function(err) {
+        if (err) console.log(err);
+        return done(err, user);
+      });
+    } else {
+      return done(err, user);
+    }
+  });
 }))
 
 

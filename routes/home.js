@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('../config/passport');
-
 var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
 dotenv.config();
@@ -85,10 +84,6 @@ router.get('/naver_oauth', passport.authenticate('naver',{
   successRedirect : '/posts',
   failureRedirect : '/login'
 }))
-
-
-
-
 
 // Logout
 router.get('/logout', function(req, res) {
