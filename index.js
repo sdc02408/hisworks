@@ -36,18 +36,12 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(flash());
 
-//catch errors
-store.on('error', function(error)  {
-  assert.ifError(error);
-  assert.ok(false);
-}); //세션을 외부에 저장
 
 app.use(session({
   secret:'MySecretcsy',
   resave:true,
   saveUninitialized:true,
   cookie: {maxAge: 3600000, httpOnly: true},
-
   rolling: true
 }));//세션 암호화
 
