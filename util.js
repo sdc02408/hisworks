@@ -16,7 +16,7 @@ util.parseError = function(errors){
   }
   return parsed;
 }
-
+//사용자가 로그인 되었는지 아닌지.
 util.isLoggedin = function(req,res,next){ //로그인이 되었는지 아닌지
   if(req.isAuthenticated()){
     next();
@@ -26,7 +26,7 @@ util.isLoggedin = function(req,res,next){ //로그인이 되었는지 아닌지
     res.redirect('/login');
   }
 }
-
+//접근권한이 없다고 판단된 경우 호출됨
 util.noPermission = function(req,res){
   req.flash('errors', {login:'you dont have permission'});
   req.logout();

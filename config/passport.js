@@ -8,12 +8,12 @@ dotenv.config();
 // serialize & deserialize User
 passport.serializeUser(function(user, done) {
   done(null, user.id);
-});
+});//login시에 db에서 발견한 user를 어떻게 session 에 저장할지 정하는 부분.
 passport.deserializeUser(function(id, done) {
   User.findOne({_id:id}, function(err, user) {
     done(err, user);
   });
-});
+});//request시에 session에서 어떻게 user object를 만들지를 정하는 부분.
 
 // local strategy
 passport.use('local-login',

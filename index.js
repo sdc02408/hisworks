@@ -7,9 +7,9 @@ var session = require('express-session');
 var passport = require('./config/passport');
 var app = express();
 var util = require('./util');
-const ejsLint = require('ejs-lint');
 var dotenv = require('dotenv');
 dotenv.config();
+
 var helmet = require('helmet');
 var assert = require('assert');
 
@@ -58,7 +58,7 @@ app.use(passport.session());//passport 세션 사용
 // Custom Middlewares
 app.use(function(req,res,next){
   res.locals.isAuthenticated = req.isAuthenticated();//현재 로그인 되어있는지 아닌지를 return
-  res.locals.currentUser = req.user;//오른쪽은 로그인이 되면 session으로 부터 user를 deserialize하여 생성됨.
+  res.locals.currentUser = req.user;//req.user 로그인이 되면 session으로부터 user를 deserialize하여 생성됨.
   next();//req.locals라는 변수에 담아.
 });
 
