@@ -14,7 +14,7 @@ var s3 = new AWS.S3();
 let lists = [];
 s3.listObjectsV2(
   {
-    Bucket: 'aws-s3-picudream'
+    Bucket: process.env.AWS_BUCKET_NAME
   },
   (err, data) => {
     if (err) {
