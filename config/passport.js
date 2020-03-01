@@ -12,7 +12,7 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(id, done) {
   User.findOne({_id:id}, function(err, user) {
     done(err, user);
-  });
+  })
 });//request시에 session에서 어떻게 user object를 만들지를 정하는 부분.
 
 // local strategy
@@ -41,37 +41,27 @@ passport.use('local-login',
   )
 );
 
-
 passport.use('naver', new NaverStrategy({
   clientID:process.env.NAVER_CLIENT_ID,
   clientSecret:process.env.NAVER_CLIENT_SECRET,
-  callbackURL:'https://picudream.herokuapp.com',
+  callbackURL:'http://localhost:3000/auth/naver/callback',
     svcType: 0,
   authType:'reauthenticate'
   },
 function(accessToken, refreshToken, profile, done) {
-  User.findOne({
-    'naver.id': profile.id
-  }, function(err, user) {
-    if (!user) {
-      user = new User({
-        name: profile.displayName,
-        email: profile.emails[0].value,
-        username: profile.displayName,
-        provider: 'naver',
-        naver: profile._json
-      });
-      user.save(function(err) {
-        if (err) console.log(err);
-        return done(err, user);
-      });
-    } else {
-      return done(err, user);
-    }
+  process.nextTick(function () {
+    console.log(accessToken, refreshToken, profile);
+    User = {
+      email: profile.emails[0].value,
+      username: profile.displayName,
+      provider: 'naver',
+      naver: profile._json
+    };
+    return done(null, profile);
   });
 }))
 
-
-
-
 module.exports = passport;
+
+
+

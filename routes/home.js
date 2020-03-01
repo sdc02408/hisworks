@@ -76,14 +76,16 @@ router.post('/login',
 ));
 
 router.get('/auth/naver', passport.authenticate('naver',{
-  successRedirect : '/posts',
+  successRedirect : '/',
   failureRedirect : '/login'
 }))
 
-router.get('/naver_oauth', passport.authenticate('naver',{
-  successRedirect : '/posts',
+router.get('/auth/naver/callback', passport.authenticate('naver',{
+  successRedirect : '/',
   failureRedirect : '/login'
 }))
+
+
 
 // Logout
 router.get('/logout', function(req, res) {
@@ -93,3 +95,5 @@ router.get('/logout', function(req, res) {
 
 
 module.exports = router;
+
+
