@@ -5,19 +5,19 @@ var bcrypt = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
   username:{
     type:String,
-    required:[true,'Username is required!'],
+    // required:[true,'Username is required!'],
     match:[/^.{4,12}$/,'Should be 4-12 characters!'],
     trim:true,
     unique:true
   },
   password:{
     type:String,
-    required:[true,'Password is required!'],
+    // required:[true,'Password is required!'],
     select:false
   },
   name:{
     type:String,
-    required:[true,'Name is required!'],
+    // required:[true,'Name is required!'],
     match:[/^.{4,12}$/,'Should be 4-12 characters!'],
     trim:true
   },
@@ -25,7 +25,13 @@ var userSchema = mongoose.Schema({
     type:String,
     match:[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,'Should be a vaild email address!'],
     trim:true
-  }
+  },
+  naver: {
+    id: String,
+    token: String,
+    email: String,
+    name: String
+  },
 },{
   toObject:{virtuals:true}
 });

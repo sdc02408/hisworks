@@ -53,7 +53,9 @@
                 <td class="author">
                     <a class="board-tab " href="/posts<%= getPostQueryString(false, {
                         searchType: 'author!',
-                        searchText: post.author.username
+                        searchText: post.author,
+                        // .username
+
                     }) %>">
                         <!-- 2 -->
                         <div data-search-highlight="author"

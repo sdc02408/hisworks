@@ -5,6 +5,7 @@ var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
 dotenv.config();
 
+
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
@@ -87,13 +88,12 @@ router.get('/auth/naver/callback', passport.authenticate('naver',{
 }))
 
 
-router.get('/auth/google', passport.authenticate('google', {
-  successRedirect : '/',
-  failureRedirect : '/login'}));
+router.get('/auth/google', passport.authenticate('google',{ scope: 'https://www.google.com/m8/feeds' }));
 
-router.get('/auth/google/callback', passport.authenticate('google', {
-  successRedirect : '/',
-    failureRedirect : '/login' }));
+router.get('/auth/google/callback', passport.authenticate('google',  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  }));
 
 
 

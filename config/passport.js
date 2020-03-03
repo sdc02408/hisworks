@@ -2,7 +2,6 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var NaverStrategy = require('passport-naver').Strategy;
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-
 var User = require('../models/User');
 var dotenv = require('dotenv');
 dotenv.config();
@@ -52,28 +51,43 @@ passport.use('naver', new NaverStrategy({
     svcType: 0,
   authType:'reauthenticate'
   },
-function(accessToken, refreshToken, profile, done) {
-  process.nextTick(function () {
-    console.log(accessToken, refreshToken, profile);
-    User = {
-      email: profile.emails[0].value,
-      username: profile.displayName,
-      provider: 'naver',
-      naver: profile._json
-    };
-    return done(null, profile);
-  });
-}))
+  function(accessToken, refreshToken, profile, done) {
+ 
+    User.findOne({ 'naver.id' : profile.id }, function(err, user) {
+      console.log(accessToken, refreshToken, profile)
+      if (err) return done(err);
+      if (user) return done(null, user);
+      else {
+        // if there is no user found with that facebook id, create them
+        var newUser = new User();
+        
+        // set all of the facebook information in our user model
+        newUser.naver.id = profile.id;
+        newUser.naver.token = accessToken;
+        newUser.naver.name  = profile.email;
+        if (typeof profile.emails != 'undefined' && profile.emails.length > 0)
+          newUser.naver.email = profile.emails[0].value;
+        
+        // save our user to the database
+        newUser.save(function(err) {
+          if (err) throw err;
+          return done(null, newUser);
+        });
+      }
+    });
+  }
+  
+  ));
 
 passport.use('google', new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: 'https://picudream.herokuapp.com/auth/google/callback'
+    callbackURL: "http://localhost:3000",
+
   },
   function(accessToken, refreshToken, profile, done) {
-    process.nextTick(function(){
-      return done(null, profile);
-    });
+
+
   }
 ));
 

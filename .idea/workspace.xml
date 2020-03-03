@@ -36,16 +36,17 @@
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\config" />
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\views\partials" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\etc\realsite\realsite\public\css" />
       <recent name="D:\etc\realsite\realsite\public\js" />
       <recent name="D:\etc\realsite\realsite\config" />
       <recent name="D:\etc\realsite\realsite\public\images" />
       <recent name="D:\etc\realsite\realsite\public" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\etc\realsite\realsite\public\images" />
-      <recent name="D:\etc\realsite\realsite\views\partials" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -114,7 +115,7 @@
       <workItem from="1583128808188" duration="32000" />
       <workItem from="1583147045040" duration="5610000" />
       <workItem from="1583214603878" duration="5825000" />
-      <workItem from="1583239322065" duration="3937000" />
+      <workItem from="1583239322065" duration="12581000" />
     </task>
     <servers />
   </component>
@@ -144,7 +145,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/home.js</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
