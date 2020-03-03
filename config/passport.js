@@ -1,19 +1,23 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var NaverStrategy = require('passport-naver').Strategy;
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
+
 var User = require('../models/User');
 var dotenv = require('dotenv');
 dotenv.config();
 
-// serialize & deserialize User
+//login시에 db에서 발견한 user를 어떻게 session 에 저장할지 정하는 부분.
 passport.serializeUser(function(user, done) {
   done(null, user.id);
-});//login시에 db에서 발견한 user를 어떻게 session 에 저장할지 정하는 부분.
+});
+
+//request시에 session에서 어떻게 user object를 만들지를 정하는 부분.
 passport.deserializeUser(function(id, done) {
   User.findOne({_id:id}, function(err, user) {
     done(err, user);
   })
-});//request시에 session에서 어떻게 user object를 만들지를 정하는 부분.
+});
 
 // local strategy
 passport.use('local-login',
@@ -60,6 +64,20 @@ function(accessToken, refreshToken, profile, done) {
     return done(null, profile);
   });
 }))
+
+passport.use('google', new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: 'https://picudream.herokuapp.com/auth/google/callback'
+  },
+  function(accessToken, refreshToken, profile, done) {
+    process.nextTick(function(){
+      return done(null, profile);
+    });
+  }
+));
+
+
 
 module.exports = passport;
 

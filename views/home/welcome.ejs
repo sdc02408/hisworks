@@ -5,7 +5,8 @@
 
     <link href="css/index.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-<!--    <link href="css/spotlight.css" rel="stylesheet">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/#.#.#/jquery.jscroll.min.js"></script>
+    <!--    <link href="css/spotlight.css" rel="stylesheet">-->
 </head>
 <body>
 <%- include('../partials/mynav') %>
@@ -104,29 +105,26 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
-
-
 <div class="container">
-            <% for (var i = 0; i < lists.length; i++) { %>
-
-                <a class="spotlight" href="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>">
-                                       <img class="spotimage"  data-autofit="true"  src="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>"
-                         alt="">
-                </a>
-
-                <% } %>
-
+<% for (var i = 0; i < lists.length; i++) { %>
+    <a class="spotlight"
+       href="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>">
+        <img class="spotimage" data-autofit="true"
+             id="article-list-pagination"
+             src="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/<%= lists[i] %>" alt="">
+    </a>
+<% } %>
 </div>
 
 
-<!--    <h1>hi</h1>-->
-<!--    <form action="/logout?_method=DELETE" method="POST">-->
-<!--      <button type="submit">Log Out</button>-->
-<!--    </form>-->
+<div class="article-list" id="article-list"></div>
+<ul class="article-list__pagination article-list__pagination--inactive" id="article-list-pagination"></ul>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/spotlight.min.js"></script>
-<script src="js/index.js"></script>
 <script src="js/spotlight.bundle.js"></script>
+<script src="js/index.js"></script>
+
 </body>
+

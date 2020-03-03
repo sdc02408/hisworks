@@ -29,7 +29,7 @@ s3.listObjectsV2(
 );
 
 
-router.get('/', function(req, res){
+router.get('/', async function(req, res){
   res.render('home/welcome', {lists:lists});
 });
 router.get('/about', function(req, res){
@@ -75,6 +75,7 @@ router.post('/login',
   }
 ));
 
+//naver login
 router.get('/auth/naver', passport.authenticate('naver',{
   successRedirect : '/',
   failureRedirect : '/login'
@@ -84,6 +85,15 @@ router.get('/auth/naver/callback', passport.authenticate('naver',{
   successRedirect : '/',
   failureRedirect : '/login'
 }))
+
+
+router.get('/auth/google', passport.authenticate('google', {
+  successRedirect : '/',
+  failureRedirect : '/login'}));
+
+router.get('/auth/google/callback', passport.authenticate('google', {
+  successRedirect : '/',
+    failureRedirect : '/login' }));
 
 
 
