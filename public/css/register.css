@@ -8,6 +8,9 @@ header,
   position: relative;
   top:10%;
 }
+.card_box{
+  margin:0 auto;
+}
 .choose-login{
 
   text-align: center;

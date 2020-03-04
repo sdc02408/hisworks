@@ -1,89 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <%- include('../partials/head') %>
     <link href="css/login.css" rel="stylesheet">
-  </head>
-  <body>
-    <%- include('../partials/mynav') %>
+</head>
+<body>
+<%- include('../partials/mynav') %>
 
+<form class="user-form" action="/login" method="post">
 
+    <div class="col-lg-4 mb-4 card">
+        <!--Header-->
+        <div class="choose-login">
 
-      <form class="user-form" action="/login" method="post">
-
-          <!-- Content -->
-          <div class="container">
-            <!--Grid row-->
-            <div class="row justify-content-center">
-              <!--Grid column-->
-              <div class="col-md-6 col-xl-5 mb-4">
-                <!--Form-->
-                <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                  <div class="card-body">
-                    <!--Header-->
-                    <div class="choose-login">
-
-                      <a href="/login" id="aa" class="card-select active">Log in</a>
-                      <a href="/users/new" id="bb" class=" card-select active" >regiseter</a>
-                      <hr class="hr-light">
-                    </div>
-
-
-        <div class="form-group row">
-          <label for="username" class="col-sm-3 col-form-label">Username</label>
-          <div class="col-sm-9">
-            <input type="text" id="username" name="username" value="<%= username %>" class="form-control <%= (errors.username)?'is-invalid':'' %>">
-            <% if(errors.username){ %>
-              <span class="invalid-feedback"><%= errors.username %></span>
-            <% } %>
-          </div>
+            <a href="/login" id="aa" class="card-select active">Log in</a>
+            <a href="/users/new" id="bb" class=" card-select active">regiseter</a>
+            <hr class="hr-light">
         </div>
 
         <div class="form-group row">
-          <label for="password" class="col-sm-3 col-form-label">Password</label>
-          <div class="col-sm-9">
-            <input type="password" id="password" name="password" value="" class="form-control <%= (errors.password)?'is-invalid':'' %>">
-            <% if(errors.password){ %>
-              <span class="invalid-feedback"><%= errors.password %></span>
+            <label for="username" class=" col-form-label">Username</label>
+            <input type="text" id="username" name="username" value="<%= username %>"
+                   class="form-control <%= (errors.username) ? 'is-invalid' : '' %>">
+            <% if(errors.username){ %>
+                <span class="invalid-feedback"><%= errors.username %></span>
             <% } %>
-          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="password" class="col-form-label">Password</label>
+            <input type="password" id="password" name="password" value=""
+                   class="form-control <%= (errors.password) ? 'is-invalid' : '' %>">
+            <% if(errors.password){ %>
+                <span class="invalid-feedback"><%= errors.password %></span>
+            <% } %>
         </div>
 
         <% if(errors.login){ %>
-          <div class="invalid-feedback d-block"><%= errors.login %></div>
+            <div class="invalid-feedback d-block"><%= errors.login %></div>
         <% } %>
-
-
-                    <div class="text-center mt-4 col-lg-12 card-button">
-                      <div class="social-login text-center">
-                        <!--                                <button type="button" class="btn  G-btn"><img src="images/googlebtn.png"></button>-->
-                        <a class="btn N-btn" href="/auth/google">
-                          <img src="images/googlebtn.png">
-                        </a>
-                        <!--                                <button type="button" class="btn  N-btn"><img src="images/naverbtn.PNG" id="naverbtn"></button>-->
-                        <a class="btn N-btn" href="/auth/naver">
-                          <img src="images/naverbtn.PNG" id="naverbtn">
-                        </a>
-                      </div>
-                      <hr class="hr-light mb-3 mt-4">
-                      <div class="text-center mt-4">
-                        <input type="submit" class="btn btn-dark col-4 btnlogin" value="submit"></input>
-                      </div>
-                      <div class="forget-pw">비밀번호를 잊어버렸습니까</div>
-                      <div id="div-message"></div>
-                    </div>
-
-
-                  </div>
+        <div class="row">
+            <div class="text-center mt-4  card-button">
+                <div class="social-login text-center">
+                    <a class="snsbtn G_btn" href="/auth/google">
+                        <img src="images/googlebtn.png" id="snsbtn_img">
+                    </a>
+                    <a class="snsbtn N_btn" href="/auth/naver">
+                        <img src="images/naverbtn.PNG" id="snsbtn_img">
+                    </a>
                 </div>
-              </div>
+                <hr class="hr-light mb-3 mt-4">
+                <div class="text-center mt-4">
+                    <input type="submit" class="btn btn-dark col-4 btnlogin" value="submit"></input>
+                </div>
+                <!--                      <div class="forget-pw">비밀번호를 잊어버렸습니까</div>-->
+                <div id="div-message"></div>
             </div>
-
-
-      </form>
+        </div>
 
     </div>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+    </div>
+    </div>
+
+
+</form>
+
+</div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="js/login.js"></script>
+</body>
 </html>

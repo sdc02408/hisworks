@@ -8,15 +8,6 @@ header,
   height: 100%;
 }
 
-@media (min-width: 800px) and (max-width: 850px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 650px;
-  }
-}
-
 *{
   font-family: 'Montserrat', sans-serif;
   font-family: 'Nanum Gothic', sans-serif;
@@ -25,7 +16,7 @@ header,
 }
 
 .user-form {
-
+  width:100%;
   position: relative;
   top:20%;
 }
@@ -67,22 +58,47 @@ header,
   top:20%;
   position:relative;
 }
+
+.form-group{
+  margin-bottom: 0;
+  padding: 0 30px;
+}
 .card {
   background-color: #ffffff;
+  margin: 0 auto;
+  height: 500px;
 }
+
+.input_login{
+  display: grid;
+}
+
 .card-button{
-  padding: 0;
+
+  padding: 0 10px;
 }
 .social-login{
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+
 }
-.G-btn,
-.N-btn{
-  width:49%;
-}
-#naverbtn{
+
+#snsbtn_img{
   width:100%;
+  padding: 0;
+  margin: 0;
+}
+.snsbtn{
+padding: 0;
+  margin: 0 auto;
+}
+
+.N_btn{
+  width:30%;
+  margin-top: 10px;
+}
+.G_btn{
+width: 31%;
 }
 .forget-pw{
  margin-top:15px;
@@ -90,3 +106,34 @@ header,
   color: #0a88d3;
 }
 
+@media (max-width: 991px) {
+  .card {
+   width:80%;
+    height: 500px;
+  }
+  .N_btn{
+    width:30%;
+    margin-top: 10px;
+  }
+  .G_btn{
+    width: 31%;
+  }
+}
+
+@media (max-width: 550px) {
+  .user-form{
+    top:10%;
+  }
+  .card {
+    width:80%;
+    height: 500px;
+  }
+  .N_btn{
+    width:50%;
+    margin-top: 10px;
+  }
+  .G_btn{
+    width: 51%;
+  }
+
+}

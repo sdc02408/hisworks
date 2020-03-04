@@ -103,7 +103,9 @@
 /*  background-color: yellow;*/
 /*}*/
 
-.board-table .author,
+.board-table .author{
+  width:200px;
+}
 .board-table .date {
   width: 150px;
 }
