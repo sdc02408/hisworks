@@ -83,15 +83,35 @@ passport.use('google', new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL: "http://localhost:3000",
-
   },
   function(accessToken, refreshToken, profile, done) {
-
+  
+    User.findOne({ 'google.id' : profile.id }, function(err, user) {
+      console.log(accessToken, refreshToken, profile)
+      if (err) return done(err);
+      if (user) return done(null, user);
+      else {
+        // if there is no user found with that facebook id, create them
+        var newUser = new User();
+      
+        // set all of the facebook information in our user model
+        newUser.google.id = profile.id;
+        newUser.google.token = accessToken;
+        newUser.google.name  = profile.email;
+        if (typeof profile.emails != 'undefined' && profile.emails.length > 0)
+          newUser.google.email = profile.emails[0].value;
+        
+        // save our user to the database
+        newUser.save(function(err) {
+          if (err) throw err;
+          return done(null, newUser);
+        });
+      }
+    });
+  
 
   }
 ));
-
-
 
 module.exports = passport;
 

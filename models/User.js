@@ -8,7 +8,7 @@ var userSchema = mongoose.Schema({
     // required:[true,'Username is required!'],
     match:[/^.{4,12}$/,'Should be 4-12 characters!'],
     trim:true,
-    unique:true
+    // unique:true
   },
   password:{
     type:String,
@@ -27,6 +27,12 @@ var userSchema = mongoose.Schema({
     trim:true
   },
   naver: {
+    id: String,
+    token: String,
+    email: String,
+    name: String
+  },
+  google: {
     id: String,
     token: String,
     email: String,
