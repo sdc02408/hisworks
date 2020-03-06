@@ -30,13 +30,14 @@ var userSchema = mongoose.Schema({
     id: String,
     token: String,
     email: String,
-    name: String
+    name: String,
+    nickname: String
   },
   google: {
     id: String,
     token: String,
     email: String,
-    name: String
+    name: String,
   },
 },{
   toObject:{virtuals:true}

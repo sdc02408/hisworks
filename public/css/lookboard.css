@@ -15,52 +15,20 @@ body{
   width: 100%;
   max-width: 100%;
 }
+.posts_style{
+  height: 37%;
+  width: 100%;
+  max-width: 100%;
+}
 
 .container{
   padding:0;
   margin:0 auto;
+  position: relative;
+  top:45%;
 }
 .parallax-window{
   width:100%;
-}
-
-.lookboard-pic{
-  background: url("../images/maple.jpg") no-repeat center center/cover;
-  position: absolute;
-  width:100%;
-  height: 30vh;
-  opacity: 0.9;
-}
-
-.section-main-title{
-  margin-bottom: 30px;
-  color:white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  top: 7%;
-  width: 40%;
-  margin: 0 auto;
-}
-#section-title{
-  font-size:42px;
-  font-weight: bold;
-  line-height: 1.5;
-  color:white;
-  text-align: left;
-  max-width: 100%;
-}
-
-#section-writer{
-  color: white;
-  font-size: 22px;
-  margin:0;
-}
-#section-date{
-  color: white;
-  font-size: 23px;
 }
 
 .breadcrumb{
@@ -88,6 +56,9 @@ body{
   color:#565867;
 }
 
+.comment_form{
+  width: 100%;
+}
 .comment{
   display: flex;
   justify-content: center;
@@ -98,33 +69,36 @@ body{
   margin: 0 auto;
 }
 
-#disqus_thread{
-  position: relative;
-  top:30%;
-  width:50%;
-  margin:70px auto 0;
 
-}
 
 
 @media(max-width: 960px){
   .lookboard{
-    width: 90%;
+    width: 100%;
   }
-  #disqus_thread{
-    width:90%;
-  }
-
 }
 @media(max-width: 700px){
 .container{
-  width:90%;
+  width:100%;
 }
   .lookboard{
  width: 100%;
 }
+  .breadcrumb{
+    margin-top: 150px;
+  }
 }
 @media(max-width: 460px){
+  .parallax-mirror{
+    width:100%!important;
+  }
+   .parallax-slider{
+     width:100%!important;
+    max-width:100%!important;
+  }
+   .container{
+     width: 90%;
+   }
   .breadcrumb{
 margin-top: 100px;
   }

@@ -78,12 +78,12 @@ router.post('/login',
 
 //naver login
 router.get('/auth/naver', passport.authenticate('naver',{
-  successRedirect : '/',
+  successRedirect : '/posts',
   failureRedirect : '/login'
 }))
 
 router.get('/auth/naver/callback', passport.authenticate('naver',{
-  successRedirect : '/',
+  successRedirect : '/posts',
   failureRedirect : '/login'
 }))
 

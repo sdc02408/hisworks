@@ -25,10 +25,22 @@
   border-color: #ffffff;
   color: white
 }
+
+.mybtn{
+  border: 1px solid #d1d1d1;
+  color: #767676;
+}
+
 .res-icon{
   color: white;
   margin-top: 5px;
 }
+.posts_style{
+  height: 37%;
+  width: 100%;
+  max-width: 100%;
+}
+
 
 @media screen and (max-width: 1440px) {
   .navbar{

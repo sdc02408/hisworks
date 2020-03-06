@@ -13,7 +13,7 @@ dotenv.config();
 var helmet = require('helmet');
 var assert = require('assert');
 
-var dburl = process.env.DB_url
+var dburl = process.env.DB_URL
 // DB setting
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);

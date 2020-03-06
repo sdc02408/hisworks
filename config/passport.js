@@ -65,6 +65,7 @@ passport.use('naver', new NaverStrategy({
         newUser.naver.id = profile.id;
         newUser.naver.token = accessToken;
         newUser.naver.name  = profile.email;
+        newUser.naver.nickname = profile.nickname;
         if (typeof profile.emails != 'undefined' && profile.emails.length > 0)
           newUser.naver.email = profile.emails[0].value;
         

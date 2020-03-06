@@ -11,11 +11,11 @@
         <% if(parentComment){ %> <!-- 2 -->
         <input type="hidden" name="parentComment" value="<%= parentComment %>">
         <% } %>
-        <div class="row col-12 p-0">
-            <div class="col-10"> <!-- 3 -->
+
+            <div class="" > <!-- 3 -->
                 <textarea id="text" name="text" rows="2" class="form-control <%= (commentError._id == comment._id && commentError.parentComment == parentComment && commentError.errors.text)?'is-invalid':'' %>"><%= (commentForm._id == comment._id)?commentForm.form.text:comment.text %></textarea>
             </div>
-            <div class="col-2">
+            <div class="mt-2" >
                 <% if(comment._id){ %>
                     <button type="submit" class="btn btn-primary h-100 mr-2 pl-4 pr-4">Edit</button>
                     <a href="javascript:void(0)" onclick="$('#comment-<%= comment._id %>').removeClass('comment-edit-enabled')">Cancel</a>
@@ -23,10 +23,10 @@
                 <button type="submit" class="btn btn-primary h-100 mr-2">Add Reply</button>
                 <a href="javascript:void(0)" onclick="$('#comment-<%= parentComment %>').removeClass('comment-reply-enabled')">Cancel</a>
                 <% } else { %>
-                    <button type="submit" class="btn mybtn h-100 mr-2">Add Comment</button>
+                    <button type="submit" class="btn mybtn h-100 ">Add Comment</button>
                 <% } %>
             </div>
-        </div>
+
         <% if(commentError._id == comment._id && commentError.parentComment == parentComment && commentError.errors.text){ %> <!-- 2 -->
         <span class="invalid-feedback d-block"><%= commentError.errors.text.message %></span>
         <% } %>

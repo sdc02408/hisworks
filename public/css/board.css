@@ -164,4 +164,10 @@
     flex: 100%;
     max-width: 100%;
   }
+ .author{
+   width: 100px;
+ }
+ .date{
+   display: none;
+ }
 }
