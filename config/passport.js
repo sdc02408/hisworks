@@ -47,7 +47,7 @@ passport.use('local-login',
 passport.use('naver', new NaverStrategy({
   clientID:process.env.NAVER_CLIENT_ID,
   clientSecret:process.env.NAVER_CLIENT_SECRET,
-  callbackURL:'http://localhost:3000//auth/naver/callback',
+  callbackURL:'http://www.hisworks.net/auth/naver/callback',
     svcType: 0,
   authType:'reauthenticate'
   },
@@ -83,7 +83,7 @@ passport.use('naver', new NaverStrategy({
 passport.use('google', new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://picudream.herokuapp.com",
+    callbackURL: "http://www.hisworks.net/",
   },
   function(accessToken, refreshToken, profile, done) {
   
