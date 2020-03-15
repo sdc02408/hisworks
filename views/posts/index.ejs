@@ -14,9 +14,9 @@
 
 
         <div class="board-tap">
-            <h3 id="forum">Community</h3>
+            <h3 id="forum">커뮤니티</h3>
             <% if(isAuthenticated){ %>
-                <!-- 2 --> <a class="btn write-board" href="/posts/new<%= getPostQueryString() %>">New</a>
+                <!-- 2 --> <a class="btn write-board" href="/posts/new<%= getPostQueryString() %>">글쓰기</a>
             <% } %>
         </div><hr>
 
@@ -30,9 +30,9 @@
 
         <thead class="thead-light">
         <tr>
-            <th scope="col">Title</th>
-            <th scope="col" class="author">Author</th>
-            <th scope="col" class="date">Date</th>
+            <th scope="col">제목</th>
+            <th scope="col" class="author">작성자</th>
+            <th scope="col" class="date">날짜</th>
         </tr>
         </thead>
 
