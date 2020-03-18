@@ -113,7 +113,7 @@
   var list = "<%= JSON.stringify(lists)%>";
   list = list.replace(/&#34;/gi, '\"');
   list = JSON.parse(list);
-  var page_size = 20;
+  var page_size = 30;
   var tmpList = [];
 
   for (var i = 0 ; i < list.length; i+page_size)
@@ -123,6 +123,7 @@
 
       var imgArea = document.createElement('div');
       imgArea.className = "img-area"
+
       for(var i in data) {
         var imageDiv = document.createElement('a');
         imageDiv.className = 'spotlight';
@@ -133,9 +134,10 @@
         imgElement.id= "article-list-pagination"
         imgElement.className = "spotimage"
         imageDiv.append(imgElement);
-
         imgArea.append(imageDiv);
+
       }
+
       document.querySelector('.container').append(imgArea);
     }
 
@@ -150,7 +152,7 @@
       let documentHeight = $(document).height();
 
       // scrollbar의 thumb가 바닥 전 30px까지 도달 하면 리스트를 가져온다.
-      if( scrollTop + windowHeight + 30 > documentHeight ){
+      if( scrollTop + windowHeight + 50 > documentHeight ){
         addImageToDOM(tmpList[i++]);
       }
     })
