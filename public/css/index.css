@@ -31,7 +31,7 @@ header,
 .main-title{
     color: white;
     font-weight: 600;
-    font-size:30px;
+    font-size:35px;
     justify-content: center;
     text-align: center;
 }
@@ -42,6 +42,15 @@ header,
     font-size:20px;
     justify-content: center;
     text-align: center;
+}
+
+.please_content{
+  color: white;
+  font-weight: 500;
+  font-size:12px;
+  justify-content: center;
+  text-align: center;
+  margin-top:10px;
 }
 .search-section{
     display: flex;
@@ -79,7 +88,7 @@ footer.page-footer{
 }
 footer .footer-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style:none;
     margin-bottom: 0;
 }

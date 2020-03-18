@@ -15,6 +15,7 @@
     <form class="form-inline col-lg-12  search-size my-2 my-lg-0 ">
         <!--      <span><i class="fas fa-search"></i></span>-->
         <input class="form-control col-lg-5 mr-sm-2" type="search" placeholder="환영합니다. 아래에 사진이 있습니다." aria-label="Search">
+    <p class="please_content col-12">게시판에 소감이나 의견 남겨 주시면 더 좋은 사진을 올리도록 하겠습니다.</p>
     </form>
     <!--      <div class="select-contain col-md-4 col-sm-12 col-xs-12" style="display: flex; justify-content: center">-->
     <!--        <div class="select-tab">-->
@@ -53,17 +54,18 @@
 
         <ul class="footer-list">
             <li>
-                <a href=#>produce by YJM</a>
+                <a href=# >COPYRIGHTⒸ2020 HisWorks All right reserved.</a>
             </li>
-            <li>
-                <a href="#!">저작권</a>
-            </li>
+<!--            <li>-->
+<!--                <a href="#!">저작권</a>-->
+<!--            </li>-->
             <li>
                 <a href="#!"></a>
             </li>
             <li>
                 <a class="ins-ic" href="https://www.instagram.com/pic._.udream/">인스타그램
-                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                    <i class="fab fa-instagram fa-lg white-text  fa-2x"></i>
+<!--                    <&#45;&#45;!mr-md-7 mr-5&ndash;&gt;-->
                 </a>
             </li>
         </ul>
@@ -104,9 +106,6 @@
 <!--</div>-->
 
 <div class="container">
-<div class="picbox">
-
-</div>
 
 </div>
 
@@ -114,15 +113,16 @@
   var list = "<%= JSON.stringify(lists)%>";
   list = list.replace(/&#34;/gi, '\"');
   list = JSON.parse(list);
-  var page_size = 30;
+  var page_size = 20;
   var tmpList = [];
 
   for (var i = 0 ; i < list.length; i+page_size)
     tmpList.push(list.splice(0,page_size));
 
-  console.log("asd",tmpList);
     const addImageToDOM =function (data) {
 
+      var imgArea = document.createElement('div');
+      imgArea.className = "img-area"
       for(var i in data) {
         var imageDiv = document.createElement('a');
         imageDiv.className = 'spotlight';
@@ -133,8 +133,10 @@
         imgElement.id= "article-list-pagination"
         imgElement.className = "spotimage"
         imageDiv.append(imgElement);
-        document.querySelector('.picbox').append(imageDiv);
+
+        imgArea.append(imageDiv);
       }
+      document.querySelector('.container').append(imgArea);
     }
 
   let isEnd = false;
@@ -147,13 +149,12 @@
       let windowHeight = $window.height();
       let documentHeight = $(document).height();
 
-      console.log("documentHeight:" + documentHeight + " | scrollTop:" + scrollTop + " | windowHeight: " + windowHeight );
-
       // scrollbar의 thumb가 바닥 전 30px까지 도달 하면 리스트를 가져온다.
       if( scrollTop + windowHeight + 30 > documentHeight ){
         addImageToDOM(tmpList[i++]);
       }
     })
+    console.log("Asd",tmpList);
     addImageToDOM(tmpList[i++]);
   })
 

@@ -6,9 +6,6 @@
 }
 
 
-.ga{
-  vertical-align: middle;
-}
 @media (min-width: 800px) and (max-width: 850px) {
   html,
   body,
@@ -98,6 +95,9 @@ border-radius: 2%;
 }
 
 /* Center align the text within the three columns below the carousel */
+.marketing{
+  padding:0;
+}
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -153,7 +153,7 @@ border-radius: 2%;
 /* Footer */
 .footer_text {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .footer_width {

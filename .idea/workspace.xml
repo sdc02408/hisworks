@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../boilerplate-mern-stack-master/boilerplate-mern-stack-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -37,18 +37,18 @@
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\locales" />
+      <recent name="D:\etc\realsite\realsite\public\css" />
+      <recent name="D:\etc\realsite\realsite\public\js" />
+      <recent name="D:\etc\realsite\realsite\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\etc\realsite\realsite\public\images" />
       <recent name="D:\etc\realsite\realsite\locales" />
       <recent name="D:\etc\realsite\realsite\config" />
       <recent name="D:\etc\realsite\realsite\views\partials" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\etc\realsite\realsite\locales" />
-      <recent name="D:\etc\realsite\realsite\public\images" />
-      <recent name="D:\etc\realsite\realsite\public\css" />
-      <recent name="D:\etc\realsite\realsite\public\js" />
-      <recent name="D:\etc\realsite\realsite\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +136,8 @@
       <workItem from="1584385481385" duration="155000" />
       <workItem from="1584419574455" duration="502000" />
       <workItem from="1584499111086" duration="11035000" />
-      <workItem from="1584516322398" duration="1116000" />
+      <workItem from="1584516322398" duration="1185000" />
+      <workItem from="1584546455166" duration="4192000" />
     </task>
     <servers />
   </component>
