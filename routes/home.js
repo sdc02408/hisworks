@@ -11,16 +11,15 @@ AWS.config.update({
   secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
   region: 'ap-northeast-2'});
 var s3 = new AWS.S3();
-
+//이부분의 FOR 문이나
 let lists = [];
-s3.listObjectsV2(
-  {
-    Bucket: process.env.AWS_BUCKET_NAME
-  },
+
+s3.listObjectsV2({Bucket: process.env.AWS_BUCKET_NAME},
   (err, data) => {
     if (err) {
       throw err;
     }
+    
     let contents = data.Contents;
     contents.forEach((content) => {
       lists.push(content.Key); // "ex) content.Key => assets/images/1.png"

@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../boilerplate-mern-stack-master/boilerplate-mern-stack-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -131,7 +131,11 @@
       <workItem from="1583954578155" duration="329000" />
       <workItem from="1584183982029" duration="6358000" />
       <workItem from="1584250623893" duration="8314000" />
-      <workItem from="1584281374582" duration="777000" />
+      <workItem from="1584281374582" duration="2126000" />
+      <workItem from="1584334491977" duration="30648000" />
+      <workItem from="1584385481385" duration="155000" />
+      <workItem from="1584419574455" duration="502000" />
+      <workItem from="1584499111086" duration="11035000" />
     </task>
     <servers />
   </component>
@@ -161,7 +165,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/home.js</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

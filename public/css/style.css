@@ -3,12 +3,16 @@
   margin: 20px auto;
   max-width: 1200px;
   padding:20px;
-
+  position: relative;
   column-count: 3;
   column-gap:20px;
   column-width:3.3vw;
 }
+.fixed {
+  position: fixed;
+  top: 0;
 
+}
 .spotimage{
   width: 100%;
   height: auto;
