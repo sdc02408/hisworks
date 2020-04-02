@@ -3,6 +3,11 @@ var router = express.Router();
 var passport = require('../config/passport');
 var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
+const Fs = require('fs')
+const Path = require('path')
+const Axios = require('axios')
+var contentType = require('content-type')
+
 dotenv.config();
 
 //aws 설정
@@ -11,30 +16,38 @@ AWS.config.update({
   secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
   region: 'ap-northeast-2'});
 var s3 = new AWS.S3();
-//이부분의 FOR 문이나
+
 let lists = [];
 
-s3.listObjectsV2({Bucket: process.env.AWS_BUCKET_NAME},
+s3.listObjectsV2(
+  {Bucket: process.env.AWS_BUCKET_NAME},
   (err, data) => {
     if (err) {
       throw err;
     }
-    
+
     let contents = data.Contents;
     contents.forEach((content) => {
       lists.push(content.Key); // "ex) content.Key => assets/images/1.png"
     });
+
+
     console.log(lists);
   }
 );
+
+
+
+
+
 
 router.get('/', function(req, res){
   res.render('home/welcome', {
     lists:lists,
  });
 
-});
 
+});
 
 router.get('/about', function(req, res){
   res.render('home/about',{lgn:"kr"});

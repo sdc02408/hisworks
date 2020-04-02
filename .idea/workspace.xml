@@ -12,8 +12,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -33,22 +33,23 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2651869" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\etc\realsite\realsite\public\images" />
-      <recent name="D:\etc\realsite\realsite\locales" />
-      <recent name="D:\etc\realsite\realsite\public\css" />
-      <recent name="D:\etc\realsite\realsite\public\js" />
-      <recent name="D:\etc\realsite\realsite\config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\etc\realsite\realsite\public\images" />
       <recent name="D:\etc\realsite\realsite\locales" />
       <recent name="D:\etc\realsite\realsite\config" />
       <recent name="D:\etc\realsite\realsite\views\partials" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\css" />
+      <recent name="D:\etc\realsite\realsite\public\js" />
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\locales" />
+      <recent name="D:\etc\realsite\realsite\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,7 +140,13 @@
       <workItem from="1584516322398" duration="1185000" />
       <workItem from="1584546455166" duration="5446000" />
       <workItem from="1584594356056" duration="749000" />
-      <workItem from="1584634464165" duration="843000" />
+      <workItem from="1584634464165" duration="1127000" />
+      <workItem from="1584929170650" duration="14617000" />
+      <workItem from="1585016458761" duration="20646000" />
+      <workItem from="1585101465511" duration="11519000" />
+      <workItem from="1585188573156" duration="749000" />
+      <workItem from="1585317782729" duration="24000" />
+      <workItem from="1585847832741" duration="447000" />
     </task>
     <servers />
   </component>
@@ -169,13 +176,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/home.js</url>
-          <line>43</line>
+          <line>56</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/posts.js</url>
           <line>128</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/spotlight.min.js</url>
+          <line>450</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

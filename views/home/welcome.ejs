@@ -4,6 +4,8 @@
 
     <link href="css/index.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
     <!--    <link href="css/spotlight.css" rel="stylesheet">-->
 </head>
 <body>
@@ -63,7 +65,7 @@
                 <a href="#!"></a>
             </li>
             <li>
-                <a class="ins-ic" href="https://www.instagram.com/pic._.udream/">인스타그램
+                <a class="ins-ic" href="https://www.instagram.com/_hisworks_yang">인스타그램
                     <i class="fab fa-instagram fa-lg white-text  fa-2x"></i>
 <!--                    <&#45;&#45;!mr-md-7 mr-5&ndash;&gt;-->
                 </a>
@@ -105,41 +107,54 @@
 <!--    </div>-->
 <!--</div>-->
 
-<div class="container">
+
+
+<div class="zoom-gallery">
 
 </div>
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
+<!--<script src="js/spotlight.bundle.js"></script>-->
+<script src="js/index.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
 <script>
+
   var list = "<%= JSON.stringify(lists)%>";
   list = list.replace(/&#34;/gi, '\"');
   list = JSON.parse(list);
   var page_size = 30;
   var tmpList = [];
 
+
   for (var i = 0 ; i < list.length; i+page_size)
     tmpList.push(list.splice(0,page_size));
 
-    const addImageToDOM =function (data) {
+  const addImageToDOM =function (data) {
 
-      var imgArea = document.createElement('div');
-      imgArea.className = "img-area"
+    var imgArea = document.createElement('div');
+    imgArea.className = "img-area"
 
-      for(var i in data) {
-        var imageDiv = document.createElement('a');
-        imageDiv.className = 'spotlight';
-        imageDiv.href = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
+    for(var i in data) {
+      var imageDiv = document.createElement('a');
+      imageDiv.className = 'spotlight';
+      imageDiv.href = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
 
-        var imgElement = document.createElement('img');
-        imgElement.src = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
-        imgElement.id= "article-list-pagination"
-        imgElement.className = "spotimage"
-        imageDiv.append(imgElement);
-        imgArea.append(imageDiv);
 
-      }
+      var imgElement = document.createElement('img');
+      imgElement.src = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
+      imgElement.id= "article-list-pagination"
+      imgElement.className = "spotimage"
+      imageDiv.append(imgElement);
 
-      document.querySelector('.container').append(imgArea);
+      imgArea.append(imageDiv);
+
     }
+
+    document.querySelector('.zoom-gallery').append(imgArea);
+  }
 
   let isEnd = false;
 
@@ -160,12 +175,40 @@
     addImageToDOM(tmpList[i++]);
   })
 
+
+  $(document).ready(function() {
+    $('.zoom-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+      image: {
+        verticalFit: true,
+        titleSrc: function(item) {
+          return  + ' &middot; <a class="image-source-link" href="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/001KakaoTalk_20200317_183636675.jpg" id="downlink"  onclick="" download="https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/001KakaoTalk_20200317_183636675.jpg"></a>';
+
+        }
+      },
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+        opener: function(element) {
+          return element.find('img');
+        }
+      },
+
+    });
+  });
+
+
+
+
+
+
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/spotlight.bundle.js"></script>
-<script src="js/index.js"></script>
-
 </body>
 

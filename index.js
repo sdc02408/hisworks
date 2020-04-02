@@ -14,6 +14,8 @@ const i18nextMiddleware = require('i18next-express-middleware');//express 미들
 const Backend = require('i18next-node-fs-backend');
 var helmet = require('helmet');
 var assert = require('assert');
+const cors = require('cors');
+
 
 var dburl = process.env.DB_URL
 // DB setting
@@ -96,7 +98,7 @@ app.use('/', require('./routes/home'));
 app.use('/posts',util.getPostQueryString, require('./routes/posts'));
 app.use('/users', require('./routes/users'));
 app.use('/comments', util.getPostQueryString, require('./routes/comments')); // 1
-
+app.use(cors());
 // Port setting
 app.listen(process.env.PORT, function(){
   console.log('server on! http://localhost:'+process.env.PORT);
