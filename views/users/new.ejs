@@ -19,14 +19,14 @@
                   <!--Header-->
                   <div class="text-center">
                     <div class="choose-login">
-                      <a href="/login" class="card-select">로그인</a>
-                      <a href="/users/new" class=" card-select">회원가입</a>
+                      <a href="/login" class="card-select">Log In</a>
+                      <a href="/users/new" class=" card-select">Sign Up</a>
                       <hr class="hr-light">
                     </div>
                   </div>
 
         <div class="form-group row">
-          <label for="username" class="col-sm-3 col-form-label">아이디*</label>
+          <label for="username" class="col-sm-3 col-form-label">ID*</label>
           <div class="col-sm-9">
             <input type="text" id="username" name="username" value="<%= user.username %>" class="form-control <%= (errors.username)?'is-invalid':'' %>">
             <% if(errors.username){ %>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="name" class="col-sm-3 col-form-label">이름*</label>
+          <label for="name" class="col-sm-3 col-form-label">Name*</label>
           <div class="col-sm-9">
             <input type="text" id="name" name="name" value="<%= user.name %>" class="form-control <%= (errors.name)?'is-invalid':'' %>">
             <% if(errors.name){ %>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="email" class="col-sm-3 col-form-label">이메일</label>
+          <label for="email" class="col-sm-3 col-form-label">Email*</label>
           <div class="col-sm-9">
             <input type="text" id="email" name="email" value="<%= user.email %>" class="form-control <%= (errors.email)?'is-invalid':'' %>">
             <% if(errors.email){ %>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="password" class="col-sm-3 col-form-label">비밀번호*</label>
+          <label for="password" class="col-sm-3 col-form-label">Password*</label>
           <div class="col-sm-9">
             <input type="password" id="password" name="password" value="" class="form-control <%= (errors.password)?'is-invalid':'' %>">
             <% if(errors.password){ %>
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="passwordConfirmation" class="col-sm-3 col-form-label">비밀번호*</label>
+          <label for="passwordConfirmation" class="col-sm-3 col-form-label">Password*</label>
           <div class="col-sm-9 col-sm-offset-3">
             <input type="password" id="passwordConfirmation" name="passwordConfirmation" value="" class="form-control <%= (errors.passwordConfirmation)?'is-invalid':'' %>">
             <% if(errors.passwordConfirmation){ %>
@@ -71,7 +71,7 @@
           </div>
         </div>
         <p>
-          <small>*필수사항</small>
+          <small>*Essentials</small>
         </p>
 
         <% if(errors.unhandled){ %>
@@ -81,11 +81,11 @@
         <% } %>
 
         <div class="submitbtn">
-          <button type="submit" class="btn btn-dark col-4">제출하기</button>
+          <button type="submit" class="btn btn-dark col-4">Submit</button>
         </div>
                   <hr class="hr-light mb-3 mt-4">
-                  <div class="agree">계정 신청을 하면 <a data-target="#agree-form" data-toggle="modal"><span>이용 약관 및 개인정보 보호 정책</span></a>에 동의한 것으로 간주됩니다.</div>
-                </div>
+<!--                  <div class="agree">계정 신청을 하면 <a data-target="#agree-form" data-toggle="modal"><span>이용 약관 및 개인정보 보호 정책</span></a>에 동의한 것으로 간주됩니다.</div>-->
+<!--                </div>-->
               </div>
             </div>
           </div>

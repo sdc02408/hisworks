@@ -13,13 +13,13 @@
         <!--Header-->
         <div class="choose-login">
 
-            <a href="/login" id="aa" class="card-select active">로그인</a>
-            <a href="/users/new" id="bb" class=" card-select active">회원가입</a>
+            <a href="/login" id="aa" class="card-select active">Log In</a>
+            <a href="/users/new" id="bb" class=" card-select active">Sign Up</a>
             <hr class="hr-light">
         </div>
 
         <div class="form-group row">
-            <label for="username" class=" col-form-label">아이디</label>
+            <label for="username" class=" col-form-label">ID</label>
             <input type="text" id="username" name="username" value="<%= username %>"
                    class="form-control <%= (errors.username) ? 'is-invalid' : '' %>">
             <% if(errors.username){ %>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="password" class="col-form-label">비밀번호</label>
+            <label for="password" class="col-form-label">PASSWORD</label>
             <input type="password" id="password" name="password" value=""
                    class="form-control <%= (errors.password) ? 'is-invalid' : '' %>">
             <% if(errors.password){ %>
@@ -42,16 +42,16 @@
         <div class="row">
             <div class="text-center mt-4  card-button">
                 <div class="social-login text-center">
-<!--                    <a class="snsbtn G_btn" href="/auth/google">-->
-<!--                        <img src="images/googlebtn.png" id="snsbtn_img">-->
-<!--                    </a>-->
+                    <a class="snsbtn G_btn" href="/auth/google">
+                        <img src="images/googlebtn.png" id="snsbtn_img">
+                    </a>
                     <a class="snsbtn N_btn" href="/auth/naver">
                         <img src="images/naverbtn.PNG" id="snsbtn_img">
                     </a>
                 </div>
                 <hr class="hr-light mb-3 mt-4">
                 <div class="text-center mt-4">
-                    <input type="submit" class="btn btn-dark col-4  btnlogin" value="들어가기"></input>
+                    <input type="submit" class="btn btn-dark col-4  btnlogin" value="Log In"></input>
                 </div>
                 <!--                      <div class="forget-pw">비밀번호를 잊어버렸습니까</div>-->
                 <div id="div-message"></div>
