@@ -2,84 +2,54 @@
 <head>
     <%- include('../partials/head') %>
 
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
 
-    <!--    <link href="css/spotlight.css" rel="stylesheet">-->
+  <!--    <link href="css/spotlight.css" rel="stylesheet">-->
 </head>
 <body>
 <%- include('../partials/mynav') %>
 
 <div class="main-content col-12">
-    <p class="main-title col-12">HisWorks</p>
-    <p class="sub-content col-12">Life is short, world is wide. I want to make memories!</p>
-    <form class="form-inline col-lg-12  search-size my-2 my-lg-0 ">
-        <!--      <span><i class="fas fa-search"></i></span>-->
-        <input class="form-control col-lg-5 mr-sm-2" type="search" placeholder="Welcome. Here's a picture below." aria-label="Search">
-    <p class="please_content col-12">If you leave a comment or comment on the bulletin board, I will post a better picture.</p>
-<!--        환영합니다. 아래에 사진이 있습니다.-->
-<!--        게시판에 소감이나 의견 남겨 주시면 더 좋은 사진을 올리도록 하겠습니다.-->
-    </form>
-    <!--      <div class="select-contain col-md-4 col-sm-12 col-xs-12" style="display: flex; justify-content: center">-->
-    <!--        <div class="select-tab">-->
-
-    <!--          <select class="custom-select custom-select-sm" id="hi" onchange="selectNum()">-->
-    <!--            <option selected value="fixed">정렬</option>-->
-    <!--            <option value="popular">인기순</option>-->
-    <!--            <option value="new">최신순</option>-->
-    <!--          </select>-->
-    <!--          <p id="demo"></p>-->
-
-    <!--          <select class="custom-select  custom-select-sm">-->
-    <!--            <option selected>카테고리</option>-->
-    <!--            <option value="1">풍경</option>-->
-    <!--            <option value="2">꽃</option>-->
-    <!--            <option value="3">나무</option>-->
-    <!--          </select>-->
-
-    <!--          <select class="custom-select  custom-select-sm">-->
-    <!--            <option selected>방향</option>-->
-    <!--            <option value="1">세로</option>-->
-    <!--            <option value="2">가로</option>-->
-    <!--          </select>-->
-    <!--        </div>-->
-    <!--      </div>-->
+  <p class="main-title col-12">HisWorks</p>
+  <p class="sub-content col-12">Life is short, world is wide. I want to make memories!</p>
+  <form class="form-inline col-lg-12  search-size my-2 my-lg-0 ">
+    <!--      <span><i class="fas fa-search"></i></span>-->
+    <input class="form-control col-lg-5 mr-sm-2" type="search" placeholder="Welcome. Here's a picture below."
+           aria-label="Search">
+    <p class="please_content col-12">게시판에 소감이나 의견 남겨 주시면 더 좋은 사진을 올리도록 하겠습니다.</p>
+    <!--        Welcome. Here's a picture below.-->
+    <!--       If you leave a comment or comment on the bulletin board, I will post a better picture.-->
+  </form>
 </div>
-
 
 <!-- Footer -->
 <footer class="page-footer  pb-2">
-    <!-- Footer Links -->
-    <div class="cs-footer">
-        <!-- Grid row -->
-
-        <!-- Grid column -->
-
-        <ul class="footer-list">
-            <li>
-                <a href=# >COPYRIGHTⒸ2020 HisWorks All right reserved.</a>
-            </li>
-<!--            <li>-->
-<!--                <a href="#!">저작권</a>-->
-<!--            </li>-->
-            <li>
-                <a href="#!"></a>
-            </li>
-            <li>
-                <a class="ins-ic" href="https://www.instagram.com/_hisworks_yang/">Instagram
-                    <i class="fab fa-instagram fa-lg white-text  fa-2x"></i>
-<!--                    <&#45;&#45;!mr-md-7 mr-5&ndash;&gt;-->
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Grid row -->
-    <!-- Footer Links -->
+  <div class="cs-footer">
+    <ul class="footer-list">
+      <li>
+        <a href=#>COPYRIGHTⒸ2020 HisWorks All right reserved.</a>
+      </li>
+      <!--            <li>-->
+      <!--                <a href="#!">저작권</a>-->
+      <!--            </li>-->
+      <li>
+        <a href="#!"></a>
+      </li>
+      <li>
+        <a class="ins-ic" href="https://www.instagram.com/_hisworks_yang/">Instagram
+          <i class="fab fa-instagram fa-lg white-text  fa-2x"></i>
+          <!--                    <&#45;&#45;!mr-md-7 mr-5&ndash;&gt;-->
+        </a>
+      </li>
+    </ul>
+  </div>
 </footer>
 <!-- Footer -->
+
 </div>
+
 
 <!--&lt;!&ndash; Central Modal Small &ndash;&gt;-->
 <!--<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"-->
@@ -110,11 +80,9 @@
 <!--</div>-->
 
 
-
 <div class="zoom-gallery">
 
 </div>
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -124,59 +92,57 @@
 <script src="js/jquery.Magnific-Popup.js"></script>
 <script>
 
-  var list = "<%= JSON.stringify(lists)%>";
-  list = list.replace(/&#34;/gi, '\"');
-  list = JSON.parse(list);
-  var page_size = 30;
-  var tmpList = [];
+  var list = "<%= JSON.stringify(lists) %>"
+  list = list.replace(/&#34;/gi, '\"')
+  list = JSON.parse(list)
+  var page_size = 30
+  var tmpList = []
 
+  for (var i = 0; i < list.length; i + page_size) {
+    tmpList.push(list.splice(0, page_size))
+  }
 
-  for (var i = 0 ; i < list.length; i+page_size)
-    tmpList.push(list.splice(0,page_size));
+  const addImageToDOM = function(data) {
 
-  const addImageToDOM =function (data) {
+    var imgArea = document.createElement('div')
+    imgArea.className = 'img-area'
 
-    var imgArea = document.createElement('div');
-    imgArea.className = "img-area"
+    for (var i in data) {
+      var imageDiv = document.createElement('a')
+      imageDiv.className = 'spotlight'
+      imageDiv.href = 'https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
 
-    for(var i in data) {
-      var imageDiv = document.createElement('a');
-      imageDiv.className = 'spotlight';
-      imageDiv.href = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
+      var imgElement = document.createElement('img')
+      imgElement.src = 'https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
+      imgElement.id = 'article-list-pagination'
+      imgElement.className = 'spotimage'
+      imageDiv.append(imgElement)
 
-
-      var imgElement = document.createElement('img');
-      imgElement.src = "https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/" + data[i];
-      imgElement.id= "article-list-pagination"
-      imgElement.className = "spotimage"
-      imageDiv.append(imgElement);
-
-      imgArea.append(imageDiv);
+      imgArea.append(imageDiv)
 
     }
 
-    document.querySelector('.zoom-gallery').append(imgArea);
+    document.querySelector('.zoom-gallery').append(imgArea)
   }
 
-  let isEnd = false;
+  let isEnd = false
 
-  $(function(){
-    $(window).scroll(function(){
+  $(function() {
+    $(window).scroll(function() {
 
-      let $window = $(this);
-      let scrollTop = $window.scrollTop();
-      let windowHeight = $window.height();
-      let documentHeight = $(document).height();
+      let $window = $(this)
+      let scrollTop = $window.scrollTop()
+      let windowHeight = $window.height()
+      let documentHeight = $(document).height()
 
       // scrollbar의 thumb가 바닥 전 30px까지 도달 하면 리스트를 가져온다.
-      if( scrollTop + windowHeight + 50 > documentHeight ){
-        addImageToDOM(tmpList[i++]);
+      if (scrollTop + windowHeight + 50 > documentHeight) {
+        addImageToDOM(tmpList[i++])
       }
     })
-    console.log("Asd",tmpList);
-    addImageToDOM(tmpList[i++]);
+    console.log('Asd', tmpList)
+    addImageToDOM(tmpList[i++])
   })
-
 
   $(document).ready(function() {
     $('.zoom-gallery').magnificPopup({
@@ -188,27 +154,23 @@
       image: {
         verticalFit: true,
         titleSrc: function(item) {
-          return  + ' &middot; <a ></a>';
+          return +' &middot; <a ></a>'
 
-        }
+        },
       },
       gallery: {
-        enabled: true
+        enabled: true,
       },
       zoom: {
         enabled: true,
         duration: 300, // don't foget to change the duration also in CSS
         opener: function(element) {
-          return element.find('img');
-        }
+          return element.find('img')
+        },
       },
 
-    });
-  });
-
-
-
-
+    })
+  })
 
 
 </script>

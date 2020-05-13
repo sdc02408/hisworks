@@ -3,18 +3,18 @@
 <head>
     <%- include('../partials/head') %>
 
-    <link href="css/normal_header.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
     <link href="css/board.css" rel="stylesheet">
 </head>
 <body>
-<%- include('../partials/normal_header') %>
+<%- include('../partials/mynav') %>
 
-<div class="container mb-3">
+<div class="container mb-3 board_box">
 
 
         <div class="board-tap">
-            <h3 id="forum">Board</h3>
+            <h3 id="forum">게시판</h3>
             <% if(isAuthenticated){ %>
                 <!-- 2 --> <a class="btn write-board" href="/posts/new<%= getPostQueryString() %>">글쓰기</a>
             <% } %>
@@ -133,7 +133,7 @@
         </div>
 
     </form>
-
+</div>
 </div>
 
 <script src="js/board.js"></script>

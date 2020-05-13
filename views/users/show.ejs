@@ -18,14 +18,14 @@
                 <form class="mypage-card" action="/users" method="post">
                     <fieldset disabled>
                         <div class="form-group row mypage-card1">
-                            <label for="name" class="col-sm-3 col-form-label">Name</label>
+                            <label for="name" class="col-sm-3 col-form-label">이름</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text" id="name" name="name"
                                        value="<%= user.name %>">
                             </div>
                         </div>
                         <div class="form-group row mypage-card2">
-                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                            <label for="email" class="col-sm-3 col-form-label">이메일</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text" id="email" name="email"
                                        value="<%= user.email %>">
@@ -38,7 +38,7 @@
             <div class="mypagebtn">
                 <a class="btn mybtn" href="/">Back</a>
                 <% if(isAuthenticated && currentUser.id == user.id){ %> <!-- 1 -->
-                <a class="btn mybtn" href="/users/<%= user.username %>/edit">Edit</a>
+                <a class="btn mybtn" href="/users/<%= user.username %>/edit">편집하기</a>
                 <% } %>
                 <form action="/users/<%= user.username %>?_method=delete" method="post" class="d-inline">
                     <a class="btn mybtn" href="javascript:void(0)"
