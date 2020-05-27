@@ -110,12 +110,16 @@
     for (var i in data) {
       var imageDiv = document.createElement('a')
       imageDiv.className = 'spotlight'
+      imageDiv.download="a"
       imageDiv.href = 'https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
+      imageDiv.title='https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
+
 
       var imgElement = document.createElement('img')
       imgElement.src = 'https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
       imgElement.id = 'article-list-pagination'
       imgElement.className = 'spotimage'
+
       imageDiv.append(imgElement)
 
       imgArea.append(imageDiv)
@@ -127,6 +131,7 @@
 
   let isEnd = false
 
+  //무한 스크롤링
   $(function() {
     $(window).scroll(function() {
 
@@ -140,10 +145,21 @@
         addImageToDOM(tmpList[i++])
       }
     })
-    console.log('Asd', tmpList)
+    console.log('분할해서 넣었어', tmpList)
     addImageToDOM(tmpList[i++])
   })
 
+  //이미지 눌러서 다운로드 버튼튼
+ // function onclickbtn () {
+ //
+ //      console.log("다운로드버튼" )
+ //
+ //  }
+
+  function download () {
+    console.log('hi')
+  }
+ //사진 누르면 나오는 창
   $(document).ready(function() {
     $('.zoom-gallery').magnificPopup({
       delegate: 'a',
@@ -154,8 +170,7 @@
       image: {
         verticalFit: true,
         titleSrc: function(item) {
-          return +' &middot; <a ></a>'
-
+          return item.el.attr('title') + '<a download="" >image source</a>';
         },
       },
       gallery: {
@@ -170,6 +185,8 @@
       },
 
     })
+
+
   })
 
 

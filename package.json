@@ -43,6 +43,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "passport-naver": "^1.0.6",
+    "request": "^2.88.2",
     "simplelightbox": "^2.1.3"
   }
 }

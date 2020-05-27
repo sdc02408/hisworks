@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('../config/passport');
-var AWS = require('aws-sdk');
 var dotenv = require('dotenv');
-const Fs = require('fs')
 const Path = require('path')
 const Axios = require('axios')
+var fs= require('fs')
 var contentType = require('content-type')
-
+var AWS = require('aws-sdk');
 dotenv.config();
 
 //aws 설정
@@ -17,37 +16,45 @@ AWS.config.update({
   region: 'ap-northeast-2'});
 var s3 = new AWS.S3();
 
+// const doDownload = (req,res) => {
+//   const params = {
+//     Bucket: process.env.AWS_BUCKET_NAME,
+//     Key:req.params.filename
+//   }
+//
+//   res.setHeader('Content-Disposition', 'attachment');
+//
+//   s3.getObject(params)
+//     .createReadStream()
+//       .on('error',function(err) {
+//         res.status(500).json({error:"error -> " + err});
+//       }).pipe(res);
+// }
+
 let lists = [];
-
-s3.listObjectsV2(
-  {Bucket: process.env.AWS_BUCKET_NAME},
-  (err, data) => {
-    if (err) {
-      throw err;
+  s3.listObjectsV2(
+    {
+      Bucket: process.env.AWS_BUCKET_NAME,
+    },
+    (err, data) => {
+      if (err) {
+        throw err;
+      }
+      
+      let contents = data.Contents;
+      contents.forEach((content) => {
+        lists.push(content.Key); // "ex) content.Key => assets/images/1.png"
+      });
     }
-
-    let contents = data.Contents;
-    contents.forEach((content) => {
-      lists.push(content.Key); // "ex) content.Key => assets/images/1.png"
-    });
-
-
-    console.log(lists);
-  }
-);
-
-
-
-
-
+  );
 
 router.get('/', function(req, res){
   res.render('home/welcome', {
     lists:lists,
  });
-
-
 });
+
+// router.get('/:filename', doDownload())
 
 router.get('/about', function(req, res){
   res.render('home/about',{lgn:"kr"});
