@@ -5,8 +5,9 @@ header,
   height: 100%;
 }
 #new-form{
-  position: relative;
-  top:10%;
+  position: absolute;
+  width:100%;
+  top:20%;
 }
 .card_box{
   margin:0 auto;

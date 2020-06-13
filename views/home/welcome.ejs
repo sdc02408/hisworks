@@ -112,7 +112,7 @@
       imageDiv.className = 'spotlight'
       imageDiv.download="a"
       imageDiv.href = 'https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
-      imageDiv.title='https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
+      // imageDiv.title='https://aws-s3-picudream.s3.ap-northeast-2.amazonaws.com/' + data[i]
 
 
       var imgElement = document.createElement('img')
@@ -169,9 +169,9 @@
       mainClass: 'mfp-with-zoom mfp-img-mobile',
       image: {
         verticalFit: true,
-        titleSrc: function(item) {
-          return item.el.attr('title') + '<a download="" >image source</a>';
-        },
+        // titleSrc: function(item) {
+        //   return item.el.attr('title') + '<a download="" >image source</a>';
+        // },
       },
       gallery: {
         enabled: true,
