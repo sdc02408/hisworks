@@ -61,15 +61,15 @@ router.get('/about', function(req, res){
 });
 
 // Login
-router.get('/login', function (req,res) {
-  var username = req.flash('username')[0];
-  var errors = req.flash('errors')[0] || {};
-  res.render('home/login', {
-    username:username,
-    errors:errors,
-    lgn:"ko"
-  });
-});
+// router.get('/login', function (req,res) {
+//   var username = req.flash('username')[0];
+//   var errors = req.flash('errors')[0] || {};
+//   res.render('home/login', {
+//     username:username,
+//     errors:errors,
+//     lgn:"ko"
+//   });
+// });
 
 router.get('/login', function (req,res) {
   var username = req.flash('username')[0];
@@ -77,11 +77,8 @@ router.get('/login', function (req,res) {
   res.render('home/login', {
     username:username,
     errors:errors,
-
-    
   });
 });
-
 
 // Post Login
 router.post('/login',
@@ -130,8 +127,6 @@ router.get('/auth/google/callback', passport.authenticate('google',  passport.au
   function(req, res) {
     res.redirect('/');
   }));
-
-
 
 // Logout
 router.get('/logout', function(req, res) {

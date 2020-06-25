@@ -5,25 +5,25 @@ var bcrypt = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
   username:{
     type:String,
-    // required:[true,'Username is required!'],
+    //반드시 입력되어야한다.
+    required:[true,'Username is required!'],
     match:[/^.{3,12}$/,'Should be 3-12 characters!'],
     trim:true,
-    // unique:true
+    // unique:true    값이 중복되면 안된다.
   },
   password:{
     type:String,
-    // required:[true,'Password is required!'],
-    select:false
+    required:[true,'비밀번호를 입력하세요'],
+    select:false //비밀번호 읽어오지 않아.
   },
   name:{
     type:String,
-    // required:[true,'Name is required!'],
-    match:[/^.{3,12}$/,'Should be 4-12 characters!'],
+    required:[true,'이름을 입력하세요'],
     trim:true
   },
   email:{
     type:String,
-    match:[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,'Should be a vaild email address!'],
+    match:[/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,'이메일의 형식이 맞지 않습니다.'],
     trim:true
   },
   naver: {
@@ -44,7 +44,8 @@ var userSchema = mongoose.Schema({
 });
 
 // virtuals
-//db에 저장되는 값 이외의 항목이 필요할때 virtual 항목사용.
+//db에 저장되는 값 이외의 항목이 필요할때 virtual 항목사용. 회원가입,회원정보 수정을 위해 필요한 항목이지만 ,db에 저장할 필요는 없는 것들
+
 userSchema.virtual('passwordConfirmation')
   .get(function(){ return this._passwordConfirmation; })
   .set(function(value){ this._passwordConfirmation=value; });
@@ -63,13 +64,14 @@ userSchema.virtual('newPassword')
 
 // password validation
 var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/;
-var passwordRegexErrorMessage = 'Should be minimum 8 characters of alphabet and number combination!';
+var passwordRegexErrorMessage = '최소 8글자의 숫자와 문자가 필요합니다.';
+
 //db에 생성,수정 하기 전에 값이 유효한지 확인하는 코드
 userSchema.path('password').validate(function(v) {
-  var user = this; //this는 user모델.
+  var user = this; //user모델.
 
   // create user
-  if(user.isNew){//현재 apssword validation의 회원가입 단계인지 회원정보 수정 단계인지 알 수 있다.
+  if(user.isNew){//현재 password validation의 회원가입 단계인지 회원정보 수정 단계인지 알 수 있다. 회원가입 단계인지 회원 정보 수정 단계인지.
     if(!user.passwordConfirmation){
       user.invalidate('passwordConfirmation', 'Password Confirmation is required.');
     }

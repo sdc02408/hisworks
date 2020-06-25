@@ -8,10 +8,8 @@ var passport = require('./config/passport');
 var app = express();
 var util = require('./util');
 var dotenv = require('dotenv');
-dotenv.config();
-const i18next = require('i18next');//i18next 추가
-const i18nextMiddleware = require('i18next-express-middleware');//express 미들웨어 추가
-const Backend = require('i18next-node-fs-backend');
+dotenv.config()
+
 var helmet = require('helmet');
 var assert = require('assert');
 const cors = require('cors');
@@ -53,35 +51,6 @@ app.use(helmet.hsts({
   includeSubDomains:true
 }));//세션 보안 설정
 
-
-
-i18next//init
-.use(Backend)
-.use(i18nextMiddleware.LanguageDetector)
-.init({
-  backend: {
-    loadPath: __dirname + '/locales/{{lng}}/{{ns}}.json',
-    addPath: __dirname + '/locales/{{lng}}/{{ns}}.missing.json'
-  },
-  fallbackLng: 'en',
-  preload: ['en','ko'],
-  saveMissing: true
-});
-
-app.use(i18nextMiddleware.handle(i18next));
-
-app.use(function (req, res, next) {
-  res.locals.shit = "똥이다 히히히";
-  res.locals.shot_shit = function(text) {
-    return text + "는 똥이야 하하하";
-  };
-  res.locals.t = function(lgn, key) {
-    var i18n = require('i18next');
-    i18n.changeLanguage(lgn);
-    return i18n.t(key);
-  }
-  next();
-})
 // Passport
 app.use(passport.initialize());//passport 모듈 초기화
 app.use(passport.session());//passport 세션 사용
