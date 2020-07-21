@@ -3,41 +3,41 @@
   <head>
     <%- include('../partials/head') %>
     <link href="/css/edit.css" rel="stylesheet">
-    <link href="/css/normal_header.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
   </head>
   <body>
-    <%- include('../partials/normal_header') %>
+  <%- include('../partials/mynav') %>
 
-    <div class="lookboard-pic"></div>
-    <div class="section-main-title">
-      <h1 id="section-title">글을 수정하세요</h1>
-      <p id="section-writer"></p>
-      <p id="section-date"></p>
-    </div>
+
+<!--    <div class="section-main-title">-->
+<!--      <h1 id="section-title">글을 수정하세요</h1>-->
+<!--      <p id="section-writer"><%= post.title %></p>-->
+<!--      <p id="section-date"></p>-->
+<!--    </div>-->
 
     <div class="container mb-3">
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-1 pl-2 pr-2">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/posts">Board</a></li>
+          <li class="breadcrumb-item"><a href="/posts">게시판</a></li>
           <li class="breadcrumb-item"><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
-          <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
+          <li class="breadcrumb-item active" aria-current="page">작성글</li>
         </ol>
       </nav>
 
 
       <form action="/posts/<%= post._id %>?_method=put<%= getPostQueryString(true) %>" method="post"> <!-- 1 -->
         <div class="edit-board-inner">
-          <label for="title">Title</label>
+          <label for="title">제목</label>
           <input type="text" id="title" name="title" value="<%= post.title %>" class="edit-title <%= (errors.title)?'is-invalid':'' %>">
           <% if(errors.title){ %>
             <span class="invalid-feedback"><%= errors.title.message %></span>
           <% } %>
         </div>
 
-        <div class="form-group">
-          <label for="body">Body</label>
+        <div class="form-group editBoxBody">
+          <label for="body">내용</label>
           <textarea id="body" name="body" rows="5" class="edit-content <%= (errors.body)?'is-invalid':'' %>"><%= post.body %></textarea>
           <% if(errors.body){ %>
             <span class="invalid-feedback"><%= errors.body.message %></span>
@@ -50,8 +50,8 @@
           </div>
         <% } %>
 
-        <div>
-          <a class="btn btn-primary" href="/posts<%= getPostQueryString() %>">Back</a>
+        <div class="editBtns">
+          <a class="btn mybtn" href="/posts<%= getPostQueryString() %>">돌아가기</a>
           <button type="submit" class="btn edit-inner-btn">Submit</button>
         </div>
 

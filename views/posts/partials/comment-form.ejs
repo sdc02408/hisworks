@@ -17,13 +17,13 @@
             </div>
             <div class="mt-2" >
                 <% if(comment._id){ %>
-                    <button type="submit" class="btn btn-primary h-100 mr-2 pl-4 pr-4">Edit</button>
-                    <a href="javascript:void(0)" onclick="$('#comment-<%= comment._id %>').removeClass('comment-edit-enabled')">Cancel</a>
+                    <button type="submit" class="btn btn-primary h-100 mr-2 pl-4 pr-4">수정하기</button>
+                    <a href="javascript:void(0)" onclick="$('#comment-<%= comment._id %>').removeClass('comment-edit-enabled')">취소</a>
                 <% } else if(parentComment) {%> <!-- 4 -->
-                <button type="submit" class="btn btn-primary h-100 mr-2">Add Reply</button>
-                <a href="javascript:void(0)" onclick="$('#comment-<%= parentComment %>').removeClass('comment-reply-enabled')">Cancel</a>
+                <button type="submit" class="btn btn-primary h-100 mr-2">댓글달기</button>
+                <a href="javascript:void(0)" onclick="$('#comment-<%= parentComment %>').removeClass('comment-reply-enabled')">취소</a>
                 <% } else { %>
-                    <button type="submit" class="btn mybtn h-100 ">Add Comment</button>
+                    <button type="submit" class="btn mybtn h-100 ">댓글달기</button>
                 <% } %>
             </div>
 

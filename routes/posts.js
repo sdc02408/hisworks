@@ -4,7 +4,6 @@ var Post = require('../models/Post');
 var User = require('../models/User');
 var util = require('../util');
 var Comment = require('../models/Comment');
-const ejsLint = require('ejs-lint');
 
 // Index
 router.get('/',async function(req, res){

@@ -36,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -49,18 +49,18 @@
     <property name="ts.external.directory.path" value="D:\webstrom\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\etc\realsite\realsite\public\images" />
+      <recent name="D:\etc\realsite\realsite\locales" />
+      <recent name="D:\etc\realsite\realsite\config" />
+      <recent name="D:\etc\realsite\realsite\views\partials" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\etc\realsite\realsite\public\images" />
       <recent name="D:\etc\realsite\realsite\public\css" />
       <recent name="D:\etc\realsite\realsite\public\js" />
       <recent name="D:\etc\realsite\realsite\locales" />
       <recent name="D:\etc\realsite\realsite\config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\etc\realsite\realsite\public\images" />
-      <recent name="D:\etc\realsite\realsite\locales" />
-      <recent name="D:\etc\realsite\realsite\config" />
-      <recent name="D:\etc\realsite\realsite\views\partials" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -176,7 +176,12 @@
       <workItem from="1593093907620" duration="20000" />
       <workItem from="1593103652505" duration="599000" />
       <workItem from="1593145465054" duration="116000" />
-      <workItem from="1594123698775" duration="776000" />
+      <workItem from="1594123698775" duration="1757000" />
+      <workItem from="1594616777501" duration="704000" />
+      <workItem from="1594702773622" duration="1964000" />
+      <workItem from="1594809882892" duration="1321000" />
+      <workItem from="1594994101220" duration="840000" />
+      <workItem from="1595338031574" duration="8722000" />
     </task>
     <servers />
   </component>
@@ -211,7 +216,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/posts.js</url>
-          <line>128</line>
+          <line>127</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
