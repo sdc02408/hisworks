@@ -51,7 +51,7 @@ border-radius: 2%;
 /* MARKETING CONTENT
 -------------------------------------------------- */
 .about_main{
-  height: 80vh;
+  height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +110,12 @@ border-radius: 2%;
   margin-left: .75rem;
 }
 
+.aboutImages{
+  border-radius: 2%;
+  box-shadow: 10px 10px 5px #ccc;
+  margin-bottom: 10px;
+}
+
 
 /* Featurettes
 ------------------------- */
@@ -140,12 +146,15 @@ border-radius: 2%;
 
 @media screen and (min-width: 800px) and (max-width:1280px) {
 .about_main{
-  height: 800px;
+  height: 650px;
 }
 }
 @media screen and (max-width: 800px) {
   .about_main_text{
     bottom: 0px;
+  }
+  .aboutImages{
+    margin-bottom: 10px;
   }
 }
 
