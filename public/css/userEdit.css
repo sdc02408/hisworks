@@ -1,0 +1,31 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+header,
+.view {
+  height: 100%;
+  width:100%;
+}
+body{
+  width: 100%;
+  max-width: 100%;
+}
+
+.userEditContainer{
+  position: relative;
+  top:10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+@media screen and (max-width: 1440px) {
+  .userEditContainer{
+    width:90%;
+    top:5%;
+  }
+}

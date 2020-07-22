@@ -80,7 +80,10 @@ header,
 .social-login{
   display: grid;
   grid-template-columns: repeat(1,1fr);
+}
 
+.btnlogin{
+  width: 30%;
 }
 
 #snsbtn_img{

@@ -6,8 +6,8 @@ var userSchema = mongoose.Schema({
   username:{
     type:String,
     //반드시 입력되어야한다.
-    required:[true,'Username is required!'],
-    match:[/^.{3,12}$/,'Should be 3-12 characters!'],
+    required:[true,'아이디의 형식이 다릅니다.'],
+    match:[/^.{3,12}$/,'최소 3글자 이상 12글자 이하를 입력하세요'],
     trim:true,
     // unique:true    값이 중복되면 안된다.
   },
