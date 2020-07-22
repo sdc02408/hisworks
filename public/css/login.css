@@ -126,16 +126,15 @@ width: 31%;
   }
   .card {
     width:80%;
-    height: 500px;
+    height: 440px;
   }
   .N_btn{
-    width:40%;
-    margin-top: 10px;
+    width:50%;
   }
   .G_btn{
     width: 51%;
   }
   .btnlogin{
-    width: 100%;
+    width: 50%;
   }
 }
