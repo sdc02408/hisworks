@@ -14,7 +14,7 @@
     "assert": "^2.0.0",
     "aws-sdk": "^2.622.0",
     "aws2js": "^0.8.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
