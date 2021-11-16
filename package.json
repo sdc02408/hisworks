@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^2.0.0",
-    "aws-sdk": "^2.622.0",
+    "aws-sdk": "^2.814.0",
     "aws2js": "^0.8.3",
     "axios": "^0.19.2",
     "bcrypt-nodejs": "0.0.3",
